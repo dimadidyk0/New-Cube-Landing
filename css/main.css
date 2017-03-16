@@ -54,9 +54,9 @@ html {
         flex-direction: row;
     }
     .block {
-        height: 80%;
+        height: 100%;
         width: 25%;
         border: 4px solid black;
-        margin: auto 0;
+        /*margin: auto 0;*/
     }
 }
