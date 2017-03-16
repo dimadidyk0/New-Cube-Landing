@@ -27,13 +27,18 @@
     <!--</div>-->
 </body>
 <script>
-    window.addEventListener("load", function() {
-        // Set a timeout...
-        // setInterval(function() {
-        //     // Hide the address bar!
-        //     window.scrollTo(0, 1);
-        // }, 1000);
-    });
+    // window.addEventListener("load", function() {
+    //     // Set a timeout...
+    //     // setInterval(function() {
+    //     //     // Hide the address bar!
+    //     //     window.scrollTo(0, 1);
+    //     // }, 1000);
+    // });
+    window.onscroll = function() {
+        let scrolled = window.pageXOffset || document.documentElement.scrollLeft;
+        console.log(scrolled + 'px');
+        document.querySelector('body').style.marginLeft = `-${scrolled}px`;
+    }
 </script>
 
 </html>

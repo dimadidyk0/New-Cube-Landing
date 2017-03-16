@@ -74,13 +74,13 @@ html {
         margin-left: 0;
     }
     .block--2 {
-        margin-left: -100%;
+        margin-left: 100%;
     }
     .block--3 {
-        margin-left: -200%;
+        margin-left: 200%;
     }
     .block--4 {
-        margin-left: -300%;
+        margin-left: 300%;
     }
     /*.content {
         width: 100%;
