@@ -49,6 +49,9 @@ html {
 }
 
 @media screen and (orientation:landscape) {
+    * {
+        overflow-y: hidden;
+    }
     body {
         width: 400%;
         overflow-y: hidden;
