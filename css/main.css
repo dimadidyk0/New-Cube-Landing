@@ -51,10 +51,11 @@ html {
 @media screen and (orientation:landscape) {
     body {
         width: 400%;
+        overflow-y: hidden;
         flex-direction: row;
     }
     .block {
-        height: 101%;
+        height: 125%;
         width: 25%;
         border: 4px solid black;
         /*margin: auto 0;*/
