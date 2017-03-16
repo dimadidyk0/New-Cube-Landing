@@ -57,15 +57,21 @@ html {
         width: 400%;
         overflow-y: hidden;
         flex-direction: row;
+        position: relative;
+    }
+    .container {
+        width: 100%;
+        /*position: fixed;*/
     }
     .block {
-        height: 9999px;
+        /*height: 9999px;*/
         width: 25%;
+        height: 100%;
         border: 4px solid black;
         /*margin: auto 0;*/
     }
     .content {
-        position: fixed;
+        /*position: fixed;*/
         width: 100%;
         height: 100%;
         box-sizing: border-box;

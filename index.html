@@ -10,18 +10,35 @@
 </head>
 
 <body>
+    <!--<div class="container">-->
     <div class="block block--1 ">
-        <div class="content">test</div>
+        <!--<div class="content">test</div>-->
     </div>
     <div class="block block--2 ">
-        <div class="content">test</div>
+        <!--<div class="content">test</div>-->
     </div>
     <div class="block block--3 ">
-        <div class="content">test</div>
+        <!--<div class="content">test</div>-->
     </div>
     <div class="block block--4 ">
-        <div class="content">test</div>
+        <!--<div class="content">test</div>-->
     </div>
+    <!--</div>-->
 </body>
+<script>
+    var elem = document.querySelector("html");
+
+    elem.addEventListener('click', s);
+
+    function s() {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        }
+    }
+</script>
 
 </html>
