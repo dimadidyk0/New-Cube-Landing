@@ -53,11 +53,14 @@ html {
     * {
         /*overflow-y: hidden;*/
     }
+    html {
+        position: relative;
+    }
     body {
         width: 400%;
         overflow-y: hidden;
         flex-direction: row;
-        position: relative;
+        /*position: relative;*/
         height: 9999px
     }
     .container {
