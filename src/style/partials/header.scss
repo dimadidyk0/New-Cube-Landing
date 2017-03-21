@@ -1,0 +1,65 @@
+header {
+    height: 756px;
+    overflow-y: hidden;
+}
+
+.header-wrapper {
+    background: url(../img/header-bg.png) no-repeat;
+    height: 798px;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    font: 24px/28px rubikmedium;
+    color: #fff;
+    padding: 21px 0 0 97px;
+    letter-spacing: 0.5px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    width: 479px;
+    font: 16px/22px open_sanssemibold;
+    color: #fff;
+    padding: 25px 42px 0 0;
+}
+
+.header-main__header {
+    font: 50px/58px open_sanslight;
+    width: 1040px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding: 154px 4px 0 0;
+}
+
+.header-main__subheader {
+    font: 18px/25px open_sanssemibold;
+    padding: 27px 2px 0 0;
+    text-align: center;
+    color: #fff;
+}
+
+.header-main__button {
+    box-sizing: border-box;
+    height: 50px;
+    width: 229px;
+    margin: 44px auto 0;
+    padding: 16px 0 0 0;
+    border-radius: 4px;
+    display: block;
+    background-color: #fff;
+    position: relative;
+    font: 15px/20px open_sansbold;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3C67FF;
+}
