@@ -1,0 +1,77 @@
+.download {
+    padding: 155px 0 80px 0;
+}
+
+.download .container {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.download__block {
+    width: 340px;
+    height: 120px;
+    display: flex;
+    padding: 33px 30px;
+    box-sizing: border-box;
+    border: 1px solid #DEDEDE;
+    align-items: center;
+}
+
+.download__img {
+    height: 54px;
+    width: 38px;
+}
+
+.download__block-header {
+    padding-left: 15px;
+    width: 196px;
+}
+
+.download__btn {
+    background: url(../img/download-img.png);
+    height: 33px;
+    width: 33px;
+    background-size: cover;
+}
+
+.download__read {
+    width: 393px;
+}
+
+.download__read-btn {
+    width: 229px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2px 0 0 18px;
+    background: #3C67FF;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font: 15px/20px open_sansbold;
+    margin: 18px 0 0;
+    letter-spacing: 0.3px;
+}
+
+.download__read-text {
+    padding: 16px 0 0;
+    font-size: 15px;
+}
+
+.download__read-btn:after {
+    content: "";
+    background: url(../img/read-img.png);
+    height: 13px;
+    width: 14px;
+    background-size: cover;
+    margin: 0 0 0 4px;
+}

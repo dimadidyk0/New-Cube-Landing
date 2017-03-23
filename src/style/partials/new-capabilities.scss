@@ -1,10 +1,212 @@
-.new-capabilities {
-    height: 688px;
-}
-
 .new-capabilities__header {
     font: 30px/45px open_sansregular;
     color: #4A4A62;
     text-align: center;
-    padding: 61px 0 0;
+    padding: 61px 0 81px;
+}
+
+.new-capabilities--block {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 100px;
+    justify-content: space-between;
+    padding-bottom: 120px;
+}
+
+.capitabilitie {
+    height: 138px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid #DCDCDC;
+    position: relative;
+    margin-bottom: 50px;
+    background: #fff;
+    opacity: 0;
+}
+
+.capitabilitie:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: -2px;
+    width: 2px;
+    background: #4F51B7;
+}
+
+.capitabilitie__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #DCDCDC;
+    align-items: center;
+    height: 22px;
+}
+
+.capitabilitie__id {
+    padding: 4px 0 2px 7px;
+    font: 10px/14px open_sansbold;
+    border-right: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    width: 67px;
+    height: 21px;
+}
+
+.capitabilitie__name {
+    font: 11px/12px open_sansregular;
+    margin: 0 auto 0 4px;
+    color: #676767;
+}
+
+.capitabilitie__numbers {
+    display: flex;
+    align-items: center;
+}
+
+.capitabilitie__number {
+    height: 14px;
+    font: 10px/12px open_sansbold;
+    display: inline-flex;
+    width: 20px;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.capitabilitie__number--1 {
+    background: #E0E0E0;
+}
+
+.capitabilitie__number--1:after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #E0E0E0;
+    width: 13px;
+    display: block;
+    right: -13px;
+    top: 0px;
+}
+
+.capitabilitie__number--2 {
+    width: 40px;
+    background: #E0E0E0;
+    margin-left: 13px;
+}
+
+.capitabilitie__number--2:after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #E0E0E0;
+    width: 13px;
+    display: block;
+    right: -13px;
+    bottom: 0px;
+}
+
+.capitabilitie__number--3 {
+    border: 1px solid #E0E0E0;
+    color: #D90000;
+    margin-left: 13px;
+    margin-right: 11px;
+}
+
+.capitabilitie__content {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    font: 15px/21px open_sansregular;
+    padding: 0 10px 0 21px;
+}
+
+.capitabilitie__footer {
+    border-top: 1px solid #DCDCDC;
+    height: 23px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.capitabilitie__post {
+    width: 166px;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    font: 11px/12px open_sansregular;
+    letter-spacing: -0.3px;
+}
+
+.capitabilitie__progress {
+    width: 55px;
+    margin-right: 13px;
+    height: 3px;
+    overflow: hidden;
+}
+
+.capitabilitie__progress-line {
+    background: #32C732;
+    height: 100%;
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+}
+
+.capitabilitie__condition {
+    width: 54px;
+    height: 12px;
+    margin-right: 10px;
+    text-align: center;
+    overflow: hidden;
+    font: 10px/12px open_sansbold;
+}
+
+.capitabilitie__condition-list {
+    display: flex;
+    width: 270px;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    font: 10px/12px open_sansbold;
+}
+
+.capitabilitie__condition-list span {
+    // min-width: 54px;
+    width: 20%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.capitabilitie__condition--preview {
+    background: #DBDBDB;
+    color: black;
+}
+
+.capitabilitie__condition--testing {
+    background: #154B85;
+}
+
+.capitabilitie__condition--done {
+    background: #32C732;
+}
+
+.capitabilitie__condition--waiting {
+    background: #DBDBDB;
+    color: black;
+}
+
+.capitabilitie__condition--doing {
+    background: #154B85;
+}
+
+// .capitabilitie--1 .capitabilitie__condition-list {}
+// .capitabilitie--2 .capitabilitie__condition-list {}
+// .capitabilitie--3 .capitabilitie__condition-list {}
+// .capitabilitie--4 .capitabilitie__condition-list {}
+.capitabilitie--5 .capitabilitie__condition-list {
+    left: -300%;
+}
+
+.capitabilitie--6 .capitabilitie__condition-list {
+    left: -300%;
 }
