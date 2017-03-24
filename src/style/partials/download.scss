@@ -75,3 +75,48 @@
     background-size: cover;
     margin: 0 0 0 4px;
 }
+
+@media screen and (max-width: 1280px) {
+    .download {
+        padding: 48px 0 0 0;
+    }
+    .download .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .download__block {
+        width: 335px;
+        height: 117px;
+        margin-bottom: 14px;
+        padding: 10px 19px;
+    }
+    .download__img {
+        height: 61px;
+        width: 44px;
+    }
+    .download__block-header {
+        padding-left: 24px;
+        width: 190px;
+    }
+    .download__btn {
+        height: 37px;
+        width: 37px;
+    }
+    .download__read-btn {
+        width: 295px;
+        margin: 15px auto 0;
+        height: 50px;
+        padding: 2px 0 0 57px;
+    }
+    .download__read-btn:after {
+        height: 21px;
+        width: 22px;
+        margin: 0 0 0 18px;
+    }
+    .download__read-text {
+        text-align: center;
+        font-size: 17px;
+        padding: 30px 0 0;
+    }
+}

@@ -45,6 +45,7 @@ header {
     padding: 27px 2px 0 0;
     text-align: center;
     color: #fff;
+    display: block;
 }
 
 .header-main__button {
@@ -62,4 +63,53 @@ header {
     text-transform: uppercase;
     text-align: center;
     color: #3C67FF;
+}
+
+@media screen and (max-width: 1280px) {
+    header {
+        height: 626px;
+    }
+    .header-wrapper {
+        height: 661px;
+    }
+    .nav__logo {
+        font-size: 21px;
+        padding: 40px 0 0 20px;
+        letter-spacing: 0.6px;
+    }
+    .nav__menu-btn+.nav__menu {
+        display: none;
+    }
+    .nav__menu-btn {
+        padding: 0px 0px 0 0;
+        font: 15px/21px open_sansbold;
+        color: #fff;
+        border-bottom: 1px solid white;
+        margin: 45px 21px 0 0;
+        height: 21px;
+        width: 45px;
+        cursor: pointer;
+    }
+    .header-main__header {
+        width: 320px;
+        font: 45px/37px open_sansregular;
+        padding: 111px 2px 0 0;
+        box-sizing: border-box;
+        letter-spacing: 0px;
+    }
+    .header-main__header--m::first-letter {
+        text-transform: uppercase;
+    }
+    .header-main__header--m {
+        display: block;
+        font: 20px/25px open_sanssemibold;
+        padding: 22px 0 0 0;
+    }
+    .header-main__button {
+        margin: 73px auto 0;
+        width: 295px;
+        background: #3C67FF;
+        color: #fff;
+        border-radius: 2px;
+    }
 }

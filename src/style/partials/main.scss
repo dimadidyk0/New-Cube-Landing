@@ -18,3 +18,29 @@ h3 {
     font-size: 18px;
     font-family: open_sanssemibold;
 }
+
+.mobile-block {
+    display: none;
+}
+
+.desktop-block {
+    display: initial;
+}
+
+@media screen and (max-width: 1280px) {
+    .mobile-block {
+        display: initial;
+    }
+    .desktop-block {
+        display: none;
+    }
+    .container {
+        width: 375px;
+        padding: 0;
+        position: static;
+    }
+    .nav__logo {
+        padding: 40px 0 0 17px;
+        font-size: 21px;
+    }
+}

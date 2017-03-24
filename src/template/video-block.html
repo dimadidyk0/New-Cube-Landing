@@ -1,3 +1,43 @@
 <div class="video-block">
-    <!--<video controls src="img/video.mp4"></video>-->
+    <video src="img/video.mp4"></video>
+    <div class="controllers">
+        <div class="fullscreen">asd</div>
+        <div class="play"></div>
+    </div>
+    <script>
+        let video = document.querySelector('video');
+        video.onclick = function() {
+            // console.log('yeah');
+            if (video.paused) video.play();
+            else video.pause();
+        }
+        let fullscreen = document.querySelector('.fullscreen');
+
+        fullscreen.onclick = function() {
+            toggleFullScreen(video);
+            // video.fullscreen();
+        }
+
+        function toggleFullScreen(elem) {
+            if (!elem.fullscreenElement && // alternative standard method
+                !elem.mozFullScreenElement && !document.webkitFullscreenElement) { // current working methods
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) {
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (elem.cancelFullScreen) {
+                    elem.cancelFullScreen();
+                } else if (elem.mozCancelFullScreen) {
+                    elem.mozCancelFullScreen();
+                } else if (elem.webkitCancelFullScreen) {
+                    elem.webkitCancelFullScreen();
+                }
+            }
+        }
+    </script>
+
 </div>
