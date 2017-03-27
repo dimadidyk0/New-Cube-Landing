@@ -20,25 +20,28 @@
                             <li>
                                 <a href="#">Продукт</a>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a href="#">Новости</a>
-                            </li>
+                            </li>-->
                             <li>
                                 <a href="#">Прайс</a>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a href="#">Команда</a>
+                            </li>-->
+                            <li>
+                                <a href="#">Портал</a>
                             </li>
                             <li>
-                                <a href="#">Блог</a>
+                                <a href="#">Войти</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
     
                 <div class="header-main">
-                    <h1 class="header-main__header">AI решение <span class="header-main__header--m">для стратегического управления разработкой ПО</span></h1>
-                    <p class="desktop-block header-main__subheader">Для ориентированных на продукт компаниях</p>
+                    <h1 class="header-main__header"><span class="header-main__header--m">Стратегическое управление и автоматизация микроменеджмента</span></h1>
+                    <p class="desktop-block header-main__subheader">Для проектных менеджеров продуктовых компаний</p>
                     <a href="#" class="header-main__button">ранний доступ</a>
                 </div>
             </div>
@@ -51,58 +54,102 @@
             <div class="min-gap__text-container">
                 <div class="min-gap__text-block">
                     <h3>Технологии</h3>
-                    <p>Искусственный интелект и Автоматизация процессов</p>
+                    <p>Автоматизация процессов и учет изменений в режиме реального времени</p>
                 </div>
                 <div class="min-gap__text-block">
                     <h3>Методологии</h3>
-                    <p>Управление изменениями и Риск менеджемнт</p>
+                    <p>Water-Scrum-Fall</p>
                 </div>
             </div>
         </div>
     </div>
     <!---->
-    <div class="video-block">
-        <video src="img/video.mp4"></video>
-        <div class="controllers">
-            <div class="fullscreen">asd</div>
-            <div class="play"></div>
-        </div>
-        <script>
-            let video = document.querySelector('video');
-            video.onclick = function() {
-                // console.log('yeah');
-                if (video.paused) video.play();
-                else video.pause();
-            }
-            let fullscreen = document.querySelector('.fullscreen');
+    <div class="video-wrapper">
+        <div class="video-block">
+            <video src="img/video.mp4">
+        </video>
+            <div class="controllers">
+                <div class="video-fullscreen"></div>
+                <div class="video-play"></div>
+                <div class="video-description">
+                    <h3>Roadmap</h3>
+                    <p>Достижение минимального разрыва между оценочными и реальными</p>
+                </div>
+            </div>
+            <script>
+                let video = document.querySelector('video');
+                let videoBlock = document.querySelector('.video-block');
+                let fullscreen = document.querySelector('.video-fullscreen');
+                let playButton = document.querySelector('.video-play');
+                let descriptionHeader = document.querySelector('.video-description h3')
+                let descriptionParagraph = document.querySelector('.video-description p')
     
-            fullscreen.onclick = function() {
-                toggleFullScreen(video);
-                // video.fullscreen();
-            }
     
-            function toggleFullScreen(elem) {
-                if (!elem.fullscreenElement && // alternative standard method
-                    !elem.mozFullScreenElement && !document.webkitFullscreenElement) { // current working methods
-                    if (elem.requestFullscreen) {
-                        elem.requestFullscreen();
-                    } else if (elem.mozRequestFullScreen) {
-                        elem.mozRequestFullScreen();
-                    } else if (elem.webkitRequestFullscreen) {
-                        elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-                    }
-                } else {
-                    if (elem.cancelFullScreen) {
-                        elem.cancelFullScreen();
-                    } else if (elem.mozCancelFullScreen) {
-                        elem.mozCancelFullScreen();
-                    } else if (elem.webkitCancelFullScreen) {
-                        elem.webkitCancelFullScreen();
+                video.onclick = function() {
+                    playPause(video);
+                };
+    
+                playButton.onclick = function() {
+                    playPause(video);
+                };
+    
+                function playPause(video) {
+                    if (video.paused) {
+                        video.play();
+                        playButton.style.zIndex = '-1';
+                        var timer = setInterval(showText, 1000);
+                    } else {
+                        video.pause();
+                        playButton.style.zIndex = '1';
+                        clearInterval(timer);
                     }
                 }
-            }
-        </script>
     
+    
+                fullscreen.onclick = function() {
+                    toggleFullScreen(videoBlock);
+                }
+    
+                function toggleFullScreen(elem) {
+                    if (!elem.fullscreenElement && // alternative standard method
+                        !elem.mozFullScreenElement && !document.webkitFullscreenElement) { // current working methods
+                        if (elem.requestFullscreen) {
+                            elem.requestFullscreen();
+                        } else if (elem.mozRequestFullScreen) {
+                            elem.mozRequestFullScreen();
+                        } else if (elem.webkitRequestFullscreen) {
+                            elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                        }
+                    } else {
+                        if (document.cancelFullScreen) {
+                            document.cancelFullScreen();
+                        } else if (document.mozCancelFullScreen) {
+                            document.mozCancelFullScreen();
+                        } else if (document.webkitCancelFullScreen) {
+                            document.webkitCancelFullScreen();
+                        }
+                        console.log('hi');
+                    }
+                }
+    
+    
+    
+    
+    
+    
+                function showText() {
+    
+                    if (video.currentTime > 3) {
+                        descriptionHeader.innerHTML = 'Test 2';
+                        descriptionParagraph.innerHTML = 'Second line'
+                    } else if (video.currentTime > 1) {
+                        descriptionHeader.innerHTML = 'Test';
+                        descriptionParagraph.innerHTML = 'First line'
+                    }
+                }
+            </script>
+    
+        </div>
     </div>
     <!---->
     <div class="new-capabilities">
@@ -156,7 +203,7 @@
                     </div>
     
                     <div class="capitabilitie__content">
-                        Возможность управлять намного более сложными проектами
+                        Возможность расширить штат разработчиков при прежнем числе менеджеров
                     </div>
     
                     <div class="capitabilitie__footer">
@@ -189,7 +236,7 @@
                     </div>
     
                     <div class="capitabilitie__content">
-                        Возможность управлять намного более сложными проектами
+                        Измеримое снижение по рискам получить результат в принципе, в сроках, качестве и бюджете
                     </div>
     
                     <div class="capitabilitie__footer">
@@ -222,7 +269,7 @@
                     </div>
     
                     <div class="capitabilitie__content">
-                        Возможность управлять намного более сложными проектами
+                        Минимум простоев в команде и их прогнозирование
                     </div>
     
                     <div class="capitabilitie__footer">
@@ -255,7 +302,7 @@
                     </div>
     
                     <div class="capitabilitie__content">
-                        Возможность управлять намного более сложными проектами
+                        Получение ПО согласно требований
                     </div>
     
                     <div class="capitabilitie__footer">
@@ -288,7 +335,7 @@
                     </div>
     
                     <div class="capitabilitie__content">
-                        Возможность управлять намного более сложными проектами
+                        Прозрачность и прогнозируемость
                     </div>
     
                     <div class="capitabilitie__footer">
@@ -320,12 +367,12 @@
         <div class="description-wrapper description-wrapper--1">
             <div class="description description--1">
                 <h3 class="description__header">стратегическое управление</h3>
-                <p class="description__subheader">Cоставить расписание исполнения проекта - определить плановые сроки начала</p>
+                <p class="description__subheader">Система автоматизирует 80% рутинных задач менеджмента проекта</p>
                 <div class="description__main">
                     <div class="description__text-block">
                         <div class="description__paragraph">
                             <h3>Гибкое планирование проекта </h3>
-                            <p>Корректировка плановых дат релизов благодаря динамично-изменяемым расчетным датам и фиксация фактического хода проекта</p>
+                            <p>Корректировка плановых дат вех/релизов благодаря динамично-изменяемым расчетным датам<br> и фиксация фактического хода проекта</p>
                         </div>
                         <div class="description__paragraph">
                             <h3>Приоритетные требования на Roadmap </h3>
@@ -338,17 +385,17 @@
         </div>
         <div class="description-wrapper description-wrapper--2">
             <div class="description description--2">
-                <h3 class="description__header">ПЛАНИРОВАНИЕ ХОДА ПРОЕКТА</h3>
-                <p class="description__subheader">Cоставить расписание исполнения проекта - определить плановые сроки </p>
+                <h3 class="description__header">Сокращение разрыва между планом и фактом</h3>
+                <p class="description__subheader">Автоматическое построение диаграмм Гантта на основании связей между задачами, исполнителей и приоритетов</p>
                 <div class="description__main">
                     <div class="description__text-block">
                         <div class="description__paragraph">
-                            <h3>Автоматизированный расчет </h3>
-                            <p>Система проводит автоматизированный расчет моделей хода всего проекта и предлагает менеджеру варианты </p>
+                            <h3>Диаграмма Гантта для требований </h3>
+                            <p>Сравнение планового графика с динамически изменяемым фактическим ходом проекта </p>
                         </div>
                         <div class="description__paragraph">
-                            <h3>Легкая навигация между вариантами хода проектов</h3>
-                            <p>Плановые диаграммы Ганта, расходования бюджета по месяцам при разных вариантах команд</p>
+                            <h3>Диаграмма Гантта для задач</h3>
+                            <p>Автоматическое построение графика на причинно-следственных связях и ручное уточнение по связям исполнения</p>
                         </div>
                     </div>
                     <div class="description__img-block"><img src="img/description-img-1.png" alt=""></div>
@@ -357,21 +404,21 @@
         </div>
         <div class="description-wrapper description-wrapper--3">
             <div class="description description--3">
-                <h3 class="description__header">УПРАВЛЕНИЕ ТРЕБОВАНИЯМИ И ИЗМЕНЕНИЯМИ </h3>
-                <p class="description__subheader">Cоставить расписание исполнения проекта - определить плановые сроки </p>
+                <h3 class="description__header">Управление требованиями</h3>
+                <p class="description__subheader">Идентификация, документирование, отслеживание, приоритизация </p>
                 <div class="description__main">
                     <div class="description__text-block">
                         <div class="description__paragraph description__paragraph--current">
-                            <h3>Типы требований </h3>
+                            <h3>Классификация требований </h3>
                             <p>Требования разбиты по типам и имеют уникальные поля, можно устанавливать взаимосвязи и зависимости</p>
                         </div>
                         <div class="description__paragraph">
-                            <h3>Автоматический расчет на что повлияет </h3>
-                            <p>Автоматический расчет на каждое изменение - что делается, что уже сделано, что необходимо переделать, какой бюджет и сроки</p>
+                            <h3>Констрейны</h3>
+                            <p>К любому типу требования можно указать некоторое правило</p>
                         </div>
                         <div class="description__paragraph">
-                            <h3>Версионирование требований </h3>
-                            <p>Фильтр по вехам/релизам</p>
+                            <h3>Приоритеты</h3>
+                            <p>Требованиям устанавливаются приоритеты, которые влияют на дальнейшую последовательность исполнения задач</p>
                         </div>
                     </div>
                     <div class="description__img-block"><img src="img/description-img-1.png" alt=""></div>
@@ -381,20 +428,20 @@
         <div class="description-wrapper description-wrapper--4">
             <div class="description description--4">
                 <h3 class="description__header">ПЛАНИРОВАНИЕ СПРИНТА </h3>
-                <p class="description__subheader">Cоставить расписание исполнения проекта - определить плановые сроки начала и завершения всех работ</p>
+                <p class="description__subheader">Возможность контролировать задержки и простои в процессе исполнения</p>
                 <div class="description__main">
                     <div class="description__text-block">
                         <div class="description__paragraph description__paragraph--current">
-                            <h3>Зависимые задачи </h3>
-                            <p>Поставив задачу на спринт, система автоматически подтянет все зависимые задачи и распределит их на ожидающие и готовые к работе</p>
+                            <h3>Учет зависимостей при планировании</h3>
+                            <p>Поставив задачу на спринт, система автоматически подтянет все зависимые задачи и распределит их на <br>ожидающий этап и готовый к работе</p>
                         </div>
                         <div class="description__paragraph">
-                            <h3>Нагрузка</h3>
-                            <p>Система автоматичеси отображает нагрузку на исполнителей и их простои</p>
+                            <h3>Назначение исполнителей</h3>
+                            <p>Автоматическое распределение и мануальное назначение задач между исполнителями с учетом их навыков</p>
                         </div>
                         <div class="description__paragraph">
-                            <h3>Распределение задач</h3>
-                            <p>Автоматическое распределение задач между исполнителями с учетом их навыков</p>
+                            <h3>Нагрузка и простои</h3>
+                            <p>Система автоматически отображает нагрузку на исполнителей и их простои</p>
                         </div>
                     </div>
                     <div class="description__img-block"><img src="img/description-img-1.png" alt=""></div>
@@ -404,20 +451,20 @@
         <div class="description-wrapper description-wrapper--5">
             <div class="description description--5">
                 <h3 class="description__header">УПРАВЛЕНИЕ ИСПОЛНЕНИЕМ</h3>
-                <p class="description__subheader">Cоставить расписание исполнения проекта - определить плановые сроки начала и завершения всех работ</p>
+                <p class="description__subheader">Гибкая настройка индивидуальных процессов исполнения</p>
                 <div class="description__main">
                     <div class="description__text-block">
                         <div class="description__paragraph">
                             <h3>Настройка роли</h3>
-                            <p>Настройка индивидуального поведения исполнителя в каждой роли на процессе </p>
+                            <p>Настройка индивидуального процесса для каждого вида технологии</p>
                         </div>
                         <div class="description__paragraph">
-                            <h3>Настройка Kanban</h3>
-                            <p>Настройка Kanban доски по выбранному параметру - исполнитель, технология, роль</p>
+                            <h3>Настройка процеса</h3>
+                            <p>Настройка индивидуального поведения исполнителя в каждой роли на процессе</p>
                         </div>
                         <div class="description__paragraph description__paragraph--current">
-                            <h3>Настройка процесса</h3>
-                            <p>Настройка индивидуального процесса для каждого вида технологии</p>
+                            <h3>Настройка Kanban доски</h3>
+                            <p>По выбранному параметру - исполнитель, технология, роль</p>
                         </div>
                     </div>
                     <div class="description__img-block"><img src="img/description-img-1.png" alt=""></div>
@@ -448,43 +495,44 @@
     <div class="directions">
         <div class="container">
             <h2 class="page-header">Ключевые направления в разработке ПО</h2>
-            <p class="directions__subheader">Cоставить расписание исполнения проекта - определить</p>
+            <p class="directions__subheader">Направлены на сокращение разрыва между планом и фактом</p>
             <div class="directions__list">
                 <div class="direction-item">
                     <h3 class="direction-item__header"><span class="direction-item__position">1</span>Управление проектом. план и отчетность</h3>
                     <ul class="direction-item__list">
-                        <li>стратегический менеджмент;</li>
-                        <li>планирование спринтов, релизов, вех;</li>
-                        <li>фиксация рабочего времени (time sheets);</li>
-                        <li>риск менеджмент;</li>
+                        <li>Стратегический менеджмент - от постановки целей до контроля достижений и управление качеством</li>
+                        <li>Моделирование команд на проекте</li>
+                        <li>Roadmap</li>
+                        <li>Отчеты рабочего времени (time sheets) и продуктивности</li>
                     </ul>
                 </div>
                 <div class="direction-item">
-                    <h3 class="direction-item__header"><span class="direction-item__position">2</span>Управление командой и коммуникация команды</h3>
+                    <h3 class="direction-item__header"><span class="direction-item__position">2</span>Управление командой и коммуникация</h3>
                     <ul class="direction-item__list">
-                        <li>настройка ролей, компетенций и доступов</li>
+                        <li>настройка ролей, навыков и доступов</li>
                         <li>совместная работа</li>
                         <li>лента активности команды</li>
                         <li>чат</li>
                     </ul>
                 </div>
                 <div class="direction-item">
-                    <h3 class="direction-item__header"><span class="direction-item__position">3</span>Управление требованиями и управление изменениями</h3>
+                    <h3 class="direction-item__header"><span class="direction-item__position">3</span>Управление требованиями</h3>
                     <ul class="direction-item__list">
                         <li>классификация требований</li>
                         <li>планирование продукта</li>
                         <li>проектирование функций, интерфейсов, ассетов</li>
-                        <li>установление взаимосвязей между требованиями и функциями</li>
-                        <li>планирование пользовательских сценариев</li>
+                        <li>установление взаимосвязей между требованиями и функциями, между функциями и вехами, между разными функциями</li>
+                        <!--<li>планирование пользовательских сценариев</li>
+                        <li>проектирование планов тестирования</li>
+                        <li>проектная документация</li>-->
                     </ul>
                 </div>
                 <div class="direction-item">
                     <h3 class="direction-item__header"><span class="direction-item__position">4</span>Управление процессом реализации проекта</h3>
                     <ul class="direction-item__list">
-                        <li>настройки разных бизнес процессов для разных типов задач (workflow</li>
-                        <li>“Kanban” доски</li>
-                        <li>управление спринтом (по методологии Scrum)</li>
-                        <li>Визирование созданных интерфейсов, программного кода</li>
+                        <li>Конструктор бизнес процессов под технологии (workflow)</li>
+                        <li>Планирование спринта</li>
+                        <li>Smart Kanban</li>
                     </ul>
                 </div>
                 <div class="direction-item">
@@ -500,6 +548,7 @@
                         <li>Отчеты об ошибках и автоматизированное создание задач по их исправлению</li>
                         <li>Continuous Deployment - автоматизированная публикация релизов</li>
                         <li>Прохождение мануальных тестов, отчетность</li>
+                        <!--<li>Отчет по качеству и рискам</li>-->
                     </ul>
                 </div>
             </div>
@@ -511,8 +560,8 @@
         <div class="container">
             <div class="footer__start-use">
                 <h2 class="footer__header">Начните использовать Solid Cube </h2>
-                <a href="#" class="footer__button footer__button--get">получить ранний доступ</a>
-                <a href="#" class="footer__button footer__button--order">заказать презентацию</a>
+                <a href="#" class="footer__button footer__button--get">Получить ранний доступ</a>
+                <a href="#" class="footer__button footer__button--order">Заказать презентацию</a>
             </div>
             <div class="footer__nav">
                 <div class="footer__language">
@@ -546,9 +595,9 @@
                         <h3>рубрики</h3>
                         <a href="#">Новости</a>
                         <a href="#">Прайс</a>
-                        <a href="#">Команда</a>
                         <a href="#">Блог</a>
                         <a href="#">Продукт</a>
+                        <a href="#">Команда</a>
                     </div>
                     <div class="footer__menu-block">
                         <h3>О компании</h3>
