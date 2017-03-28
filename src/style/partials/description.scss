@@ -23,7 +23,7 @@
 .description__header {
     padding: 80px 0 0 0;
     text-align: center;
-    color: #444458;
+    color: #272735;
     font: 22px/33px $semibold;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -307,6 +307,12 @@
         overflow-y: hidden;
         overflow-x: scroll;
         display: flex;
+        // margin-left: 50%;
+        // left: -187.5px;
+        // left: -50%;
+        position: relative;
+        width: 375px;
+        margin: 0 auto;
     }
     .description-wrapper:nth-child(n) {
         .description {
@@ -406,6 +412,11 @@
             -ms-writing-mode: lr-tb;
             writing-mode: horizontal-tb;
             padding: 80px 25px 0;
+        }
+        .descriptions {
+            margin-left: 0;
+            left: 0;
+            width: 100%;
         }
     }
 }
