@@ -1,5 +1,5 @@
 .new-capabilities__header {
-    font: 30px/45px open_sansregular;
+    font: 30px/45px $regular;
     color: #4A4A62;
     text-align: center;
     padding: 61px 0 81px;
@@ -47,7 +47,7 @@
 
 .capitabilitie__id {
     padding: 4px 0 2px 7px;
-    font: 10px/14px open_sansbold;
+    font: 10px/14px $bold;
     border-right: 1px solid #DCDCDC;
     box-sizing: border-box;
     width: 67px;
@@ -55,7 +55,7 @@
 }
 
 .capitabilitie__name {
-    font: 11px/12px open_sansregular;
+    font: 11px/12px $regular;
     margin: 0 auto 0 4px;
     color: #676767;
 }
@@ -67,7 +67,7 @@
 
 .capitabilitie__number {
     height: 14px;
-    font: 10px/12px open_sansbold;
+    font: 10px/12px $bold;
     display: inline-flex;
     width: 20px;
     justify-content: center;
@@ -116,7 +116,7 @@
     height: 90px;
     display: flex;
     align-items: center;
-    font: 15px/21px open_sansregular;
+    font: 15px/21px $regular;
     padding: 0 10px 0 21px;
 }
 
@@ -133,7 +133,7 @@
     width: 166px;
     box-sizing: border-box;
     padding: 0 0 0 10px;
-    font: 11px/12px open_sansregular;
+    font: 11px/12px $regular;
     letter-spacing: -0.3px;
 }
 
@@ -158,7 +158,7 @@
     margin-right: 10px;
     text-align: center;
     overflow: hidden;
-    font: 10px/12px open_sansbold;
+    font: 10px/12px $bold;
 }
 
 .capitabilitie__condition-list {
@@ -168,7 +168,7 @@
     position: relative;
     color: #fff;
     text-transform: uppercase;
-    font: 10px/12px open_sansbold;
+    font: 10px/12px $bold;
 }
 
 .capitabilitie__condition-list span {
@@ -206,7 +206,7 @@
 
 @media screen and (max-width: 1280px) {
     .new-capabilities__header {
-        font: 20px/12px open_sanssemibold;
+        font: 20px/12px $semibold;
         padding: 88px 0 52px 0;
     }
     .new-capabilities--block {
@@ -219,6 +219,7 @@
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
         margin-bottom: 19.5px;
+        opacity: 1;
     }
     .capitabilitie__header {
         height: 29px;
@@ -291,6 +292,6 @@
         margin-right: 15px;
     }
     .capitabilitie__condition-list {
-        font: 12px/17px open_sansbold;
+        font: 12px/17px $bold;
     }
 }

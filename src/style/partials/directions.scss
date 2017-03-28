@@ -3,7 +3,7 @@
 }
 
 .directions__subheader {
-    font: 18px/25px open_sanssemibold;
+    font: 18px/25px $semibold;
     text-align: center;
     padding: 24px 0 0;
     letter-spacing: -0.2px;
@@ -34,17 +34,17 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font: 18px/25px open_sanssemibold;
+    font: 18px/25px $semibold;
     color: #1D1D3B;
     position: relative;
     padding-bottom: 3px;
 }
 
 .direction-item__position {
-    font: 15px/18px open_sansbold;
+    font: 15px/18px $bold;
     color: #fff;
     text-align: center;
-    background: #3C67FF;
+    background: $main-blue;
     height: 20px;
     width: 20px;
     padding: 1px 0 0;
@@ -56,7 +56,7 @@
 }
 
 .direction-item__list li {
-    font: 15px/22px open_sansregular;
+    font: 15px/22px $regular;
     color: #333333;
     padding-bottom: 13px;
     position: relative;
@@ -74,7 +74,7 @@
 }
 
 .directions__bottom-text {
-    font: 15px/26px open_sansregular;
+    font: 15px/26px $regular;
     color: #ADADAD;
     padding: 33px 0 104px;
     text-align: center;
@@ -87,13 +87,13 @@
     }
     .directions .page-header {
         width: auto;
-        font: 26px/33px open_sansbold;
+        font: 26px/33px $bold;
         color: #1D1D3B;
         font-size: 26px;
         padding: 70px 10px 0;
     }
     .directions__subheader {
-        font: 16px/22px open_sansregular;
+        font: 16px/22px $regular;
         padding: 18px 25px;
         letter-spacing: 0px;
     }
@@ -101,8 +101,8 @@
         padding: 0;
     }
     .direction-item__header {
-        font: 18px/22px open_sanssemibold;
-        color: #2B57EB;
+        font: 18px/22px $semibold;
+        color: $main-blue;
         height: 70px;
     }
     .direction-item {
@@ -112,7 +112,7 @@
         padding: 11px 20px 0 69px;
     }
     .direction-item__position {
-        color: #3C67FF;
+        color: $main-blue;
         border: 2px solid;
         background: #fff;
         height: 25px;

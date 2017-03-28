@@ -22,13 +22,20 @@ header {
     letter-spacing: 0.5px;
 }
 
+.nav__menu {
+    display: flex;
+    padding: 25px 42px 0 0;
+}
+
 .nav__list {
     display: flex;
     justify-content: space-between;
-    width: 479px;
-    font: 16px/22px open_sansregular;
+    font: 16px/22px $regular;
     color: #fff;
-    padding: 25px 42px 0 0;
+}
+
+.nav__list li a {
+    margin: 0 24px;
 }
 
 .nav__list li:last-of-type a {
@@ -38,7 +45,7 @@ header {
 }
 
 .header-main__header {
-    font: 50px/58px open_sanslight;
+    font: 50px/58px $light;
     width: 1040px;
     margin: 0 auto;
     text-align: center;
@@ -47,7 +54,7 @@ header {
 }
 
 .header-main__subheader {
-    font: 18px/25px open_sanssemibold;
+    font: 18px/25px $semibold;
     padding: 27px 2px 0 0;
     text-align: center;
     color: #fff;
@@ -64,11 +71,35 @@ header {
     display: block;
     background-color: #fff;
     position: relative;
-    font: 15px/20px open_sansbold;
+    font: 15px/20px $bold;
     letter-spacing: 0.3px;
     text-transform: uppercase;
     text-align: center;
-    color: #3C67FF;
+    color: $main-blue;
+}
+
+.header__language {
+    font: 16px/22px $regular;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header__language li {
+    display: none;
+}
+
+li.header__current-lang {
+    display: block;
+    position: relative;
+}
+
+.header__current-lang a:after {
+    content: "";
+    border: 3px solid transparent;
+    border-top: 4px solid white;
+    position: absolute;
+    margin-left: 6px;
+    top: 10px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -88,7 +119,7 @@ header {
     }
     .nav__menu-btn {
         padding: 0px 0px 0 0;
-        font: 15px/21px open_sansbold;
+        font: 15px/21px $bold;
         color: #fff;
         border-bottom: 1px solid white;
         margin: 45px 21px 0 0;
@@ -98,7 +129,7 @@ header {
     }
     .header-main__header {
         width: 320px;
-        font: 45px/37px open_sansregular;
+        font: 45px/37px $regular;
         padding: 111px 2px 0 0;
         box-sizing: border-box;
         letter-spacing: 0px;
@@ -108,13 +139,13 @@ header {
     }
     .header-main__header--m {
         display: block;
-        font: 20px/25px open_sanssemibold;
+        font: 20px/25px $semibold;
         padding: 22px 0 0 0;
     }
     .header-main__button {
         margin: 73px auto 0;
         width: 295px;
-        background: #3C67FF;
+        background: $main-blue;
         color: #fff;
         border-radius: 2px;
     }

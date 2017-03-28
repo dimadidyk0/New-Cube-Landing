@@ -6,17 +6,17 @@
 }
 
 p {
-    color: #586981;
+    color: $main-gray;
     line-height: 26px;
     font-size: 17px;
-    font-family: open_sansregular;
+    font-family: $regular;
 }
 
 h3 {
     color: #1D1D3B;
     line-height: 25px;
     font-size: 18px;
-    font-family: open_sanssemibold;
+    font-family: $semibold;
 }
 
 .mobile-block {
@@ -31,7 +31,7 @@ h3 {
     .mobile-block {
         display: initial;
     }
-    .desktop-block {
+    body .desktop-block {
         display: none;
     }
     .container {

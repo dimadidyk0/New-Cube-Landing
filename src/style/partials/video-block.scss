@@ -53,11 +53,25 @@ video {
 }
 
 @media screen and (max-width: 1280px) {
+    .video-wrapper {
+        max-width: 375px;
+        margin: 0 auto;
+        height: auto;
+        padding: 0;
+    }
     .video-block {
         padding: 0;
-        height: 211px;
         width: 100%;
-        max-width: 375px;
+    }
+    .video-description {
+        display: none;
+    }
+    .video-fullscreen {
+        display: none;
+    }
+    .video-play {
+        height: 102px;
+        width: 81px;
     }
     video {
         width: 100%;

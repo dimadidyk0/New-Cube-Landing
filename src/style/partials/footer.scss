@@ -28,7 +28,7 @@
 }
 
 .footer__header {
-    font: 30px/28px open_sansregular;
+    font: 30px/28px $regular;
     color: #4A4A62;
     width: 529px;
     padding-left: 98px;
@@ -36,7 +36,7 @@
 
 .footer__button {
     height: 40px;
-    font: 15px/20px open_sansbold;
+    font: 15px/20px $bold;
     letter-spacing: 0.3px;
     -webkit-display: flex;
     -moz-display: flex;
@@ -50,14 +50,14 @@
 }
 
 .footer__button--get {
-    background: #2B57EB;
+    background: $main-blue;
     color: #fff;
     padding: 0 24px;
 }
 
 .footer__button--order {
     background: #fff;
-    color: #2B57EB;
+    color: $main-blue;
     padding: 0 17px;
 }
 
@@ -67,8 +67,8 @@
 }
 
 .footer__language {
-    color: #3C67FF;
-    font: 15px/36px open_sanssemibold;
+    color: $main-blue;
+    font: 15px/36px $semibold;
     width: 256px;
     box-sizing: border-box;
     margin-left: 101px;
@@ -84,7 +84,7 @@
     height: 0px;
     width: 0px;
     border: 3px solid transparent;
-    border-top: 6px solid #2B57EB;
+    border-top: 6px solid $main-blue;
     margin: 14px 0 0 -20px;
 }
 
@@ -124,13 +124,13 @@
 
 .footer__menu {
     h3 {
-        font: 14px/28px open_sansbold;
+        font: 14px/28px $bold;
         color: #4A4A62;
         padding-bottom: 12px;
         text-transform: uppercase;
     }
     a {
-        font: 15px/26px open_sansregular;
+        font: 15px/26px $regular;
         color: #616161;
         padding-bottom: 5px;
         display: block;
@@ -143,7 +143,7 @@
 
 .footer__policy {
     p {
-        font: 12px/21px open_sansregular;
+        font: 12px/21px $regular;
         color: #777;
     }
 }
@@ -161,8 +161,8 @@
         flex-direction: column;
     }
     .footer__header {
-        font: 30px/43px open_sanslight;
-        color: #2B57EB;
+        font: 30px/43px $light;
+        color: $main-blue;
         padding: 52px 50px 19px 0;
         width: auto;
     }
@@ -220,7 +220,7 @@
         }
         a {
             padding-bottom: 14px;
-            color: #586981;
+            color: $main-gray;
         }
     }
     .footer__location {
@@ -256,7 +256,7 @@
         font-size: 14px;
         line-height: 25px;
         padding-bottom: 2px;
-        color: #586981;
+        color: $main-gray;
     }
     .footer__location h3 {
         font-size: 18px;
@@ -267,7 +267,7 @@
         padding: 0;
         text-align: center;
         p {
-            color: #586981;
+            color: $main-gray;
             height: 50px;
             font-size: 16px;
             display: flex;
@@ -285,12 +285,15 @@
         align-self: flex-end;
         left: 0;
         margin-top: 36px;
+        box-sizing: border-box;
     }
     .footer__copityght {
         height: 67px;
-        font: 14px/25px open_sansregular;
-        color: #586981;
+        font: 14px/25px $regular;
+        color: $main-gray;
         padding-top: 15px;
         box-sizing: border-box;
+        display: block;
+        text-align: center;
     }
 }
