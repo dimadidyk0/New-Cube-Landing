@@ -52,14 +52,15 @@
     -ms-flex-align: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 2px 0 0 18px;
-    background: $main-blue;
+    padding: 3px 0 0;
+    background: #3C67FF;
     border-radius: 5px;
     color: white;
     text-transform: uppercase;
-    font: 15px/20px $bold;
+    font: 15px/20px $semibold;
     margin: 18px 0 0;
     letter-spacing: 0.3px;
+    justify-content: center;
 }
 
 .download__read-text {

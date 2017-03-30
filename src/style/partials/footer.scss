@@ -36,7 +36,7 @@
 
 .footer__button {
     height: 40px;
-    font: 15px/20px $bold;
+    font: 15px/20px $regular;
     letter-spacing: 0.3px;
     -webkit-display: flex;
     -moz-display: flex;
@@ -59,6 +59,7 @@
     background: #fff;
     color: $main-blue;
     padding: 0 17px;
+    font-family: $semibold;
 }
 
 .footer__nav {
@@ -199,12 +200,14 @@
     .footer__language-list:before {
         border: 7px solid transparent;
         border-top: 10px solid #C6C6C6;
-        margin: 3px 0 0 311px;
+        margin: 7 px 0 0 311px;
     }
     .footer__language:after {
         position: absolute;
         width: 100%;
-        border: 1px solid #DADADA;
+        border: 1px solid transparent;
+        border-top: 1px solid #DADADA;
+        border-bottom: 1px solid #dadada;
         left: 0;
         right: 0;
         content: "";
