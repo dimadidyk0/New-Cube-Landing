@@ -5,7 +5,17 @@
     <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <script>
+        let windowWidth = window.innerWidth;
+        let meta = document.querySelector('[name="viewport"]');
+        console.log(meta);
+        if (windowWidth < 1080) {
+            meta.setAttribute('content', "width=device-width, initial-scale=1.0");
+        } else if (windowWidth < 1280) {
+            meta.setAttribute('content', "width=1280");
+        }
+    </script>
+    <title>Solid Cube</title>
 </head>
 
 <body>

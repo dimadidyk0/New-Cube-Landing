@@ -2,6 +2,7 @@
     background: url('../img/min-gap-bg.png') no-repeat;
     background-size: cover;
     height: 347px;
+    display: block;
 }
 
 .page-header {
@@ -26,6 +27,9 @@
     height: 55px;
     justify-content: space-between;
     position: relative;
+    p {
+        padding-top: 4px;
+    }
 }
 
 .min-gap__text-block:first-of-type:after {

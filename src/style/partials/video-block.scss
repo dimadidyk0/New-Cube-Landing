@@ -30,14 +30,14 @@ video {
 .video-play {
     background: url(../img/play.png) no-repeat;
     background-size: cover;
-    height: 166px;
-    width: 132px;
+    height: 174px;
+    width: 140px;
     position: absolute;
     margin: auto;
-    left: 0;
+    left: 0px;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 0px;
     cursor: pointer;
 }
 
@@ -50,9 +50,10 @@ video {
     bottom: 30px;
     background: #F5F3F3;
     padding: 18px 30px;
+    box-sizing: border-box;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1080px) {
     .video-wrapper {
         max-width: 375px;
         margin: 0 auto;

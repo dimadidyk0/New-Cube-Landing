@@ -40,7 +40,7 @@ header {
 
 .nav__list li:last-of-type a {
     border: 1px solid white;
-    padding: 3px 14px;
+    padding: 6px 14px 5px;
     border-radius: 5px;
 }
 
@@ -91,6 +91,7 @@ header {
 li.header__current-lang {
     display: block;
     position: relative;
+    font-family: $light;
 }
 
 .header__current-lang a:after {
@@ -102,7 +103,7 @@ li.header__current-lang {
     top: 10px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1080px) {
     header {
         height: 626px;
     }

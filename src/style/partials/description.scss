@@ -5,6 +5,10 @@
         margin: auto;
     }
     
+    .descriptions {
+        overflow: hidden;
+    }
+    
     .description-wrapper--1 {
         background: url(../img/description-bg-1.png) no-repeat;
         background-size: cover;
@@ -41,6 +45,7 @@
     .description__main {
         display: flex;
         padding: 65px 0 0;
+        // overflow: hidden;
     }
     
     .description-wrapper:nth-child(2n) .description__main {
@@ -284,7 +289,7 @@
         }
     }
     
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1080px) {
         .mobile-block.change-position {
             height: 334px;
             max-width: 334px;
