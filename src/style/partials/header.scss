@@ -45,7 +45,9 @@ header {
 }
 
 .header-main__header {
-    font: 50px/58px $light;
+    font: 50px/58px "helvetica neue", $light;
+    font-weight: 100;
+    letter-spacing: 4px;
     width: 1040px;
     margin: 0 auto;
     text-align: center;
@@ -54,7 +56,9 @@ header {
 }
 
 .header-main__subheader {
-    font: 18px/25px $regular;
+    font: 18px/25px 'helvetica neue', $regular;
+    font-weight: 400;
+    letter-spacing: 1px;
     padding: 27px 2px 0 0;
     text-align: center;
     color: #fff;

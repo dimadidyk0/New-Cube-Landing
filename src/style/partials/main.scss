@@ -1,3 +1,43 @@
+@font-face {
+    font-family: "HelveticaLight";
+    src: url("../fonts/HelveticaLight/HelveticaLight.eot");
+    src: url("../fonts/HelveticaLight/HelveticaLight.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaLight/HelveticaLight.woff") format("woff"), url("../fonts/HelveticaLight/HelveticaLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaMedium";
+    src: url("../fonts/HelveticaMedium/HelveticaMedium.eot");
+    src: url("../fonts/HelveticaMedium/HelveticaMedium.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaMedium/HelveticaMedium.woff") format("woff"), url("../fonts/HelveticaMedium/HelveticaMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaUltraLight";
+    src: url("../fonts/HelveticaUltraLight/HelveticaUltraLight.eot");
+    src: url("../fonts/HelveticaUltraLight/HelveticaUltraLight.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaUltraLight/HelveticaUltraLight.woff") format("woff"), url("../fonts/HelveticaUltraLight/HelveticaUltraLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaThin";
+    src: url("../fonts/HelveticaThin/HelveticaThin.eot");
+    src: url("../fonts/HelveticaThin/HelveticaThin.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaThin/HelveticaThin.woff") format("woff"), url("../fonts/HelveticaThin/HelveticaThin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaRegular";
+    src: url("../fonts/HelveticaRegular/HelveticaRegular.eot");
+    src: url("../fonts/HelveticaRegular/HelveticaRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"), url("../fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 .container {
     width: 1200px;
     padding: 0 40px;

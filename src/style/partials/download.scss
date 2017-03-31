@@ -53,7 +53,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 3px 0 0;
-    background: #3C67FF;
+    background: #2B57EB;
     border-radius: 5px;
     color: white;
     text-transform: uppercase;
@@ -66,17 +66,18 @@
 .download__read-text {
     padding: 16px 0 0;
     font-size: 15px;
+    width: 229px;
+    text-align: center;
 }
 
-.download__read-btn:after {
-    content: "";
-    background: url(../img/read-img.png);
-    height: 13px;
-    width: 14px;
-    background-size: cover;
-    margin: 0 0 0 4px;
-}
-
+// .download__read-btn:after {
+//     content: "";
+//     background: url(../img/read-img.png);
+//     height: 13px;
+//     width: 14px;
+//     background-size: cover;
+//     margin: 0 0 0 4px;
+// }
 @media screen and (max-width: 1080px) {
     .download {
         padding: 48px 0 0 0;
