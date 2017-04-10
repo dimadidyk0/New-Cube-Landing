@@ -98,23 +98,81 @@ window.onload = function() {
     //      ##### DESCRIPTION POINTS ####
     //      #############################
 
+    // let descriptions = document.querySelectorAll('.description');
+    // descriptions.forEach(d => {
+
+    //     let points = d.querySelectorAll('.description__point');
+    //     points.forEach(p => {
+
+    //         let destination = p.getAttribute('data-destination');
+    //         let currentParagraph = d.querySelector(`[data-point="${destination}"]`);
+
+    //         p.onmouseover = () => {
+    //             currentParagraph.classList.add('description__paragraph--current');
+    //         };
+
+    //         p.onmouseout = () => {
+    //             currentParagraph.classList.remove('description__paragraph--current');
+    //         };
+    //     });
+    // });
+
+    window.onscroll = function() {
+        let scrolled = window.pageYOffset || document.scrollTop;
+        // console.log(scrolled);
+    }
+
     let descriptions = document.querySelectorAll('.description');
     descriptions.forEach(d => {
 
         let points = d.querySelectorAll('.description__point');
-        points.forEach(p => {
 
-            let destination = p.getAttribute('data-destination');
-            let currentParagraph = d.querySelector(`[data-point="${destination}"]`);
+        var i = 0;
+        setTimeout(function run() {
 
-            p.onmouseover = () => {
-                currentParagraph.classList.add('description__paragraph--current');
-            };
 
-            p.onmouseout = () => {
-                currentParagraph.classList.remove('description__paragraph--current');
-            };
-        });
+
+            i++;
+            if (i < points.length) setTimeout(run, 1000);
+        }, 100);
+
+        let y = d.offsetTop;
     });
+
+
+    pointActivation(descriptions[2]);
+}
+
+function pointActivation(description) {
+    let points = description.querySelectorAll('.description__point');
+    let paragraphs = description.querySelectorAll('.description__paragraph');
+    let y = description.offsetTop;
+
+    let scrolled = window.pageYOffset || document.scrollTop;
+
+
+    // if (y <= scrolled) {
+    let i = 0;
+    setTimeout(function run() {
+        // console.log(points[i]);
+        points.forEach(p => p.classList.remove('description__point--hover'));
+        paragraphs.forEach(p => p.classList.remove('description__paragraph--current'));
+
+
+        points[i].classList.add('description__point--hover');
+        paragraphs[i].classList.add('description__paragraph--current');
+        i++;
+        if (i < points.length) setTimeout(run, 1000);
+        else {
+            setTimeout(function() {
+                points.forEach(p => p.classList.remove('description__point--hover'));
+                paragraphs.forEach(p => p.classList.remove('description__paragraph--current'));
+            }, 1000);
+            // clearTimeout(a);
+        }
+
+    }, 100);
+    // }
+
 
 }
