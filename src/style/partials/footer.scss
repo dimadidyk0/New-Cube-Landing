@@ -36,6 +36,8 @@
 
 .footer__button {
     height: 40px;
+    justify-content: center;
+    min-width: 220px;
     font: 15px/20px $regular;
     letter-spacing: 0.3px;
     -webkit-display: flex;
@@ -200,7 +202,7 @@
     .footer__language-list:before {
         border: 7px solid transparent;
         border-top: 10px solid #C6C6C6;
-        margin: 7 px 0 0 311px;
+        margin: 7px 0 0 311px;
     }
     .footer__language:after {
         position: absolute;

@@ -155,15 +155,15 @@
         height: 560px;
     }
     
-    .description__paragraph--current {
+    .description__paragraph--current,
+    .description__paragraph:hover {
         border: 1px solid #D8D8D8;
         padding: 18px 20px 17px;
         border-radius: 5px;
         margin: 8px -21px 9px;
-    }
-    
-    .description__paragraph--current h3 {
-        color: $main-blue;
+        h3 {
+            color: $main-blue;
+        }
     }
     
     .description-wrapper--5 {

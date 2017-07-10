@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         let windowWidth = window.innerWidth;
         let meta = document.querySelector('[name="viewport"]');
-        if (windowWidth < 1080) {
-            meta.setAttribute('content', "width=device-width, initial-scale=1.0");
+         if (windowWidth < 1080) {
+            meta.setAttribute('content', "width=device-width, initial-scale=1.0, maximum-scale=1");
         } else if (windowWidth < 1280) {
             meta.setAttribute('content', "width=1280");
         }
@@ -17,23 +17,13 @@
     <title>Solid Cube</title>
 </head>
 
-<body>
-    //= template/header.html
-    <!---->
-    //= template/min-gap.html
-    <!---->
-    //= template/video-block.html
-    <!---->
-    //= template/new-capabilities.html
-    <!---->
-    //= template/description.html
-    <!---->
-    //= template/download.html
-    <!---->
-    //= template/directions.html
-    <!---->
-    //= template/footer.html
-    <script src="js/main.js"></script>
+<body id="black">
+<!--<body>-->
+
+//= template/landing.html
+//= template/landing2.html
+
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
