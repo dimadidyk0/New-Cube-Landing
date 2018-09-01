@@ -5,787 +5,95 @@
     <link rel="stylesheet" href="/css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        let windowWidth = window.innerWidth;
-        let meta = document.querySelector('[name="viewport"]');
-         if (windowWidth < 1080) {
-            meta.setAttribute('content', "width=device-width, initial-scale=1.0, maximum-scale=1");
-        } else if (windowWidth < 1280) {
-            meta.setAttribute('content', "width=1280");
-        }
-    </script>
-    <title>Solid Cube</title>
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans" rel="stylesheet">
 </head>
 
-<body id="black">
+<body>
 <!--<body>-->
 
-<div>
-    <div class="pop-up-layout"></div>
-    <div id="pop-up-thank">
-        <h2>thank you</h2>
-        <h3>we will contact you</h3>
+<header class="header">
+    <div class="container">
+        <div class="header__caption">Business Casual</div>
+        <div class="header__location">3481 melrose place | beverly hills, ca 90210 | 123.456.7890 </div>
+    </div> 
+    <div class="header__navigation">
+        <nav class="navigation__item">
+            <a href="/">
+                home
+            </a>
+        </nav>
+        <nav class="navigation__item">
+            <a href="/index_about.html">
+                about
+            </a>
+        </nav>
+        <nav class="navigation__item">
+            <a href="/index_blog.html">
+            blog
+            </a>
+        </nav>
+        <nav class="navigation__item">
+            <a href="/index_contact.html">
+            contact
+            </a>
+        </nav>
     </div>
-    <div id="pop-up" class="pop-up">
-        <div class="span pop-up__close"></div>
-        <h2 class="pop-up__header">EARLY ACCESS</h2>
-        <div class="pop-up__main">
-            <div class="pop-up__invite">
-                <div class="pop-up__form-header">Enter your invitation code</div>
-                <form method="POST" action="javascript:void(null);" id="invite-form">
-                    <label for="email">Invitation code</label>
-                    <input type="text" autocomplete="off" name="email" placeholder="Input your code" required>
-                    <input type="submit" value="Use Invite &amp; Register">
-                </form>
-            </div>
-            <div class="pop-up__or">
-                <span>or</span>
-            </div>
-            <div class="pop-up__registration">
-                <div class="pop-up__form-header">Fill out the request form</div>
-                <form method="POST" action="javascript:void(null);" id="registration-form">
-                    <label for="email">Email</label>
-                    <input type="email" autocomplete="off" name="email" placeholder="Input your Email" required>
-                    <label for="firstname">Name</label>
-                    <input type="text" autocomplete="off" name="firstname" placeholder="Input your name">
-                    <label for="company">Company name</label>
-                    <input type="text" autocomplete="off" name="company" placeholder="Input your company name" required>
-                    <input type="submit" value="Request Invite">
-                </form>
-            </div>
-        </div>
+</header>
+<div class="slider">
+    <div class="slider__container container__main">
+        <img src="/img/slide-1.jpg" alt=""  class="slider__image">
+        <img src="/img/slide-2.jpg" alt="" class="slider__image">
+        <img src="/img/slide-3.jpg" alt="" class="slider__image">
+        <div class="slider__text">Welcome To</div>
+        <div class="slider__caption">Business Casual</div>
+        <div class="line"></div>
+        <div class="slider__text_by"><span class="normal">by</span> start gulp</div>
     </div>
-    <div class="pop-up" id="pop-up-order">
-        <div class="span pop-up__close"></div>
-        <h2 class="pop-up__header">ORDER A PRESENTATION</h2>
-        <div class="pop-up__main">
-            <div class="pop-up__registration">
-                <form method="POST" action="javascript:void(null);" id="order-presentation">
-                    <label for="email">Email</label>
-                    <input type="email" autocomplete="off" name="email" placeholder="Input your Email" required>
-                    <label for="name">Name</label>
-                    <input type="text" autocomplete="off" name="name" placeholder="Input your name" required>
-                    <label for="phone">Phone</label>
-                    <input type="text" autocomplete="off" name="phone" placeholder="Input phone number" required>
-                    <input type="text" value='1' name="requestforcontact">
-                    <input type="submit" value="Order">
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="pop-up pop-up--download" id="pop-up-product-sheet">
-        <div class="span pop-up__close"></div>
-        <h2 data-localestring="base.k118" class="pop-up__header">Product sheet</h2>
-        <div class="pop-up__main">
-            <div class="pop-up__text">
-                <h3 data-localestring="base.k119">Thank you for your interest in our product!</h3>
-                <p data-localestring="base.k121">We are working hard on creating a presentation. We want to send you an understandable and beautiful document for whom we created and how our product works!</p>
-                <p data-localestring="base.k120">Please, leave your coordinates and as soon as we make a presentation, we will immediately inform you.</p>
-                <p data-localestring="base.k124" class="pop-up__team">The Solid Cube Team</p>
-            </div>
-            <div class="pop-up__registration">
-                <form method="POST" action="javascript:void(null);" id="product-sheet">
-                    <label for="email">Email</label>
-                    <input type="email" autocomplete="off" name="email" placeholder="Input your Email" required>
-                    <label for="name">Name</label>
-                    <input type="text" autocomplete="off" name="name" placeholder="Input your name" required>
-                    <input type="text" value='1' name="requestforcontact">
-                    <input type="submit" value="Send">
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="pop-up pop-up--download" id="pop-up-technical-documentation">
-        <div class="span pop-up__close"></div>
-        <h2 data-localestring="base.k117" class="pop-up__header">Technical documentation</h2>
-        <div class="pop-up__main">
-            <div class="pop-up__text">
-                <h3 data-localestring="base.k119">Thank you for your interest in our product!</h3>
-                <p data-localestring="base.k122">We are working hard on creating an API. We want to send you an understandable and beautiful document for whom we created and how our product works!</p>
-                <p data-localestring="base.k125">Please, leave your coordinates and as soon as we make an API, we will immediately inform you.</p>
-                <p data-localestring="base.k124" class="pop-up__team">The Solid Cube Team</p>
-            </div>
-            <div class="pop-up__registration">
-                <form method="POST" action="javascript:void(null);" id="technical-documentation">
-                    <label for="email">Email</label>
-                    <input type="email" autocomplete="off" name="email" placeholder="Input your Email" required>
-                    <label for="name">Name</label>
-                    <input type="text" autocomplete="off" name="name" placeholder="Input your name" required>
-                    <input type="text" value='1' name="requestforcontact">
-                    <input type="submit" value="Send">
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="pop-up pop-up--download" id="pop-up-user-documentation">
-        <div class="span pop-up__close"></div>
-        <h2 data-localestring="base.k116" class="pop-up__header">User documentation</h2>
-        <div class="pop-up__main">
-            <div class="pop-up__text">
-                <h3 data-localestring="base.k119">Thank you for your interest in our product!</h3>
-                <p data-localestring="base.k123">We are working hard on creating a documentation. We want to send you an understandable and beautiful document for whom we created and how our product works!</p>
-                <p data-localestring="base.k126">Please, leave your coordinates and as soon as we make a documentation, we will immediately inform you.</p>
-                <p data-localestring="base.k124" class="pop-up__team">The Solid Cube Team</p>
-            </div>
-            <div class="pop-up__registration">
-                <form method="POST" action="javascript:void(null);" id="user-documentation">
-                    <label for="email">Email</label>
-                    <input type="email" autocomplete="off" name="email" placeholder="Input your Email" required>
-                    <label for="name">Name</label>
-                    <input type="text" autocomplete="off" name="name" placeholder="Input your name" required>
-                    <input type="text" value='1' name="requestforcontact">
-                    <input type="submit" value="Send">
-                </form>
-            </div>
-        </div>
-    </div>
-    <header>
-        <div class="header-wrapper">
-            <div class="container">
-
-                <div class="nav">
-                    <div class="nav__logo"><a href="#">solidcube.tech</a></div>
-                    <div class="mobile-block nav__menu-btn">Меню</div>
-                    <nav class="nav__menu">
-                        <!--<ul class="nav__list">
-                            <li>
-                                <a href="#" data-localestring="base.k1">Продукт</a>
-                            </li>
-                            <li>
-                                <a href="#" data-localestring="base.k2">Прайс</a>
-                            </li>
-                            <li>
-                                <a href="#" data-localestring="base.k3">Портал</a>
-                            </li>
-                            <li>
-                                <a href="#" data-localestring="base.k4">Войти</a>
-                            </li>
-                        </ul>-->
-                        <ul class="header__language language-list">
-                            <li data-lg="ru" class='current-lang'><a href="/ru">ru</a></li>
-                            <li data-lg="en"><a href="/en">en</a></li>
-                            <!--<li data-lg="jp"><a href="/jp">jp</a></li>-->
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="header-main">
-                    <h1 class="header-main__header">
-                        <span data-localestring="base.k5" class="header-main__header--m">Стратегическое управление и автоматизация микроменеджмента</span>
-                    </h1>
-                    <p data-localestring="base.k6" class="desktop-block header-main__subheader">Для проектных менеджеров продуктовых компаний</p>
-                    <a id="early-access" href="javascript:void(0)" data-localestring="base.k7" data-destenation="pop-up" class="header-main__button pop-up-button">ранний доступ</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!---->
-    <div class="min-gap desktop-block">
-        <div class="container">
-            <h2 data-localestring="base.k8" class="page-header">Достижение минимального разрыва между оценочными и реальными сроками работ</h2>
-            <div class="min-gap__text-container">
-                <div class="min-gap__text-block">
-                    <h3 data-localestring="base.k9">Технологии</h3>
-                    <p data-localestring="base.k10">Автоматизация процессов и учет изменений в режиме реального времени</p>
-                </div>
-                <div class="min-gap__text-block">
-                    <h3 data-localestring="base.k11">Методологии</h3>
-                    <p>Water-Scrum-Fall</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-
-</div>
-<div>
-    <!---->
-    <div class="video-wrapper">
-        <div class="video-block">
-            <video poster="/img/video/video.jpg">
-                <source src="/img/video/video.webm" type="video/webm">
-                <source src="/img/video/video.mp4" type="video/mp4">
-                <source src="/img/video/video.mov" type="video/mov"> 
-            </video>
-            <div class="controllers">
-                <div class="video-fullscreen"></div>
-                <div class="video-play"></div>
-                <div class="video-description">
-                    <h3>Roadmap</h3>
-                    <p data-localestring="base.k12">Достижение минимального разрыва между оценочными и реальными</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-    <div class="new-capabilities">
-        <div class="container">
-
-            <div class="roadmap">
-                <h2 class="roadmap__header">Roadmap</h2>
-                <div class="roadmap__container">
-                    
-
-                    <ul class="roadmap__main">
-                        <ul class="roadmap__date-block">
-                            <li>Июнь  </li>
-                            <li>
-                                <span>2017</span>
-                                Июль  </li>
-                            <li>Авг   </li>
-                            <li>Сен   </li>
-                            <li>Окт   </li>
-                            <li>Нояб  </li>
-                            <li>Дек   </li>
-                            <li>
-                                <span>2018</span>
-                                Янв   </li>
-                            <li>Фев   </li>
-                            <li>Март  </li>
-                            <li>Апрель</li>
-                            <li>Май   </li>
-                            <li>Июнь  </li>
-                            <li>Июль  </li>
-                        </ul>
-                        <li>
-                            <span>1</span>
-                            The ability to manage much
-                        </li>
-                        <li>
-                            <span>2</span>
-                            Image arfifact preview
-                        </li>
-                        <li>
-                            <span>3</span>
-                            The ability to increase the number of developers 
-                        </li>
-                        <li>
-                            <span>4</span>
-                            The ability to increase the number of developers 
-                        </li>
-                        <li>
-                            <span>5</span>
-                            The ability to increase the number of developers 
-                        </li>
-                        <li>
-                            <span>6</span>
-                            The ability to increase the number
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!--<h2 data-localestring="base.k13" class="new-capabilities__header">Новые возможности</h2>-->
-            
-            <div class="requirements">
-                <div class="requirement">
-                    <div class="requirement__header">
-                        <span class="requirement__title">
-                            R.1
-                            <span class="requirement__star"></span>
-                        </span>
-                        <span class="requirement__project">
-                            Project managment
-                            <span class="requirement__hedaer-number">10</span>
-                        </span>
-                    </div>
-                    <div class="requirement__content">
-                        The ability to increase the number of developers in the same number of managers.
-                    </div>
-                    <div class="requirement__footer">
-                        <div class="requirement__day">
-                            <span></span>
-                            22.10.16
-                        </div>
-                        <div class="requirement__footer-numbers">
-                            <span class="requirement__number requirement__number--1">20 </span>
-                            <span data-localestring="base.k14" class="requirement__number requirement__number--2">365 д </span>
-                            <span class="requirement__number requirement__number--3">10</span>
-                        </div>
-                        <div class="requirement__progress-block">
-                            <span class="requirement__progress-line"><span></span></span>
-                            <span class="requirement__progress-line"><span></span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement">
-                    <div class="requirement__header">
-                        <span class="requirement__title">
-                            R.1
-                            <span class="requirement__star"></span>
-                        </span>
-                        <span class="requirement__project">
-                            Project managment
-                            <span class="requirement__hedaer-number">10</span>
-                        </span>
-                    </div>
-                    <div class="requirement__content">
-                        The ability to increase the number of developers in the same number of managers.
-                    </div>
-                    <div class="requirement__footer">
-                        <div class="requirement__day">
-                            <span></span>
-                            22.10.16
-                        </div>
-                        <div class="requirement__footer-numbers">
-                            <span class="requirement__number requirement__number--1">20 </span>
-                            <span data-localestring="base.k14" class="requirement__number requirement__number--2">365 д </span>
-                            <span class="requirement__number requirement__number--3">10</span>
-                        </div>
-                        <div class="requirement__progress-block">
-                            <span class="requirement__progress-line"><span></span></span>
-                            <span class="requirement__progress-line"><span></span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement">
-                    <div class="requirement__header">
-                        <span class="requirement__title">
-                            R.1
-                            <span class="requirement__star"></span>
-                        </span>
-                        <span class="requirement__project">
-                            Project managment
-                            <span class="requirement__hedaer-number">10</span>
-                        </span>
-                    </div>
-                    <div class="requirement__content">
-                        The ability to increase the number of developers in the same number of managers.
-                    </div>
-                    <div class="requirement__footer">
-                        <div class="requirement__day">
-                            <span></span>
-                            22.10.16
-                        </div>
-                        <div class="requirement__footer-numbers">
-                            <span class="requirement__number requirement__number--1">20 </span>
-                            <span data-localestring="base.k14" class="requirement__number requirement__number--2">365 д </span>
-                            <span class="requirement__number requirement__number--3">10</span>
-                        </div>
-                        <div class="requirement__progress-block">
-                            <span class="requirement__progress-line"><span></span></span>
-                            <span class="requirement__progress-line"><span></span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement">
-                    <div class="requirement__header">
-                        <span class="requirement__title">
-                            R.1
-                            <span class="requirement__star"></span>
-                        </span>
-                        <span class="requirement__project">
-                            Project managment
-                            <span class="requirement__hedaer-number">10</span>
-                        </span>
-                    </div>
-                    <div class="requirement__content">
-                        The ability to increase the number of developers in the same number of managers.
-                    </div>
-                    <div class="requirement__footer">
-                        <div class="requirement__day">
-                            <span></span>
-                            22.10.16
-                        </div>
-                        <div class="requirement__footer-numbers">
-                            <span class="requirement__number requirement__number--1">20 </span>
-                            <span data-localestring="base.k14" class="requirement__number requirement__number--2">365 д </span>
-                            <span class="requirement__number requirement__number--3">10</span>
-                        </div>
-                        <div class="requirement__progress-block">
-                            <span class="requirement__progress-line"><span></span></span>
-                            <span class="requirement__progress-line"><span></span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement">
-                    <div class="requirement__header">
-                        <span class="requirement__title">
-                            R.1
-                            <span class="requirement__star"></span>
-                        </span>
-                        <span class="requirement__project">
-                            Project managment
-                            <span class="requirement__hedaer-number">10</span>
-                        </span>
-                    </div>
-                    <div class="requirement__content">
-                        The ability to increase the number of developers in the same number of managers.
-                    </div>
-                    <div class="requirement__footer">
-                        <div class="requirement__day">
-                            <span></span>
-                            22.10.16
-                        </div>
-                        <div class="requirement__footer-numbers">
-                            <span class="requirement__number requirement__number--1">20 </span>
-                            <span data-localestring="base.k14" class="requirement__number requirement__number--2">365 д </span>
-                            <span class="requirement__number requirement__number--3">10</span>
-                        </div>
-                        <div class="requirement__progress-block">
-                            <span class="requirement__progress-line"><span></span></span>
-                            <span class="requirement__progress-line"><span></span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement">
-                    <div class="requirement__header">
-                        <span class="requirement__title">
-                            R.1
-                            <span class="requirement__star"></span>
-                        </span>
-                        <span class="requirement__project">
-                            Project managment
-                            <span class="requirement__hedaer-number">10</span>
-                        </span>
-                    </div>
-                    <div class="requirement__content">
-                        The ability to increase the number of developers in the same number of managers.
-                    </div>
-                    <div class="requirement__footer">
-                        <div class="requirement__day">
-                            <span></span>
-                            22.10.16
-                        </div>
-                        <div class="requirement__footer-numbers">
-                            <span class="requirement__number requirement__number--1">20 </span>
-                            <span data-localestring="base.k14" class="requirement__number requirement__number--2">365 д </span>
-                            <span class="requirement__number requirement__number--3">10</span>
-                        </div>
-                        <div class="requirement__progress-block">
-                            <span class="requirement__progress-line"><span data-progress="20"></span></span>
-                            <span class="requirement__progress-line"><span></span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!---->
-    <div class="mobile-block change-position">
-        <h2>AI</h2>
-        <p data-localestring="base.k26"><span>Измени свою</span>точку зрения на управление проектами</p>
-    </div>
-    <div class="descriptions">
-        <div class="video-wrapper">
-            <div class="video-block">
-                <video poster="/img/video/video.jpg">
-                <source src="/img/video/video.mp4" type="video/mp4">
-                <source src="/img/video/video.mov" type="video/mov"> 
-                <source src="/img/video/video.webm" type="video/webm">
-            </video>
-                <div class="controllers">
-                    <div class="video-fullscreen"></div>
-                    <div class="video-play"></div>
-                    <div class="video-description">
-                        <h3>Roadmap</h3>
-                        <p data-localestring="base.k12">Достижение минимального разрыва между оценочными и реальными</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="description-wrapper description-wrapper--1">
-            <div class="description description--1">
-                <div class="description__header-text">
-                    <h3 data-localestring="base.k28" class="description__header">Стратегическое управление</h3>
-                    <p data-localestring="base.k29" class="description__subheader">Система автоматизирует 80% рутинных задач менеджмента проекта</p>
-                </div>
-                <div class="description__main">
-                    <div class="description__text-block">
-                        <div class="description__paragraph" data-point="1">
-                            <h3 data-localestring="base.k30">Гибкое планирование проекта</h3>
-                            <p data-localestring="base.k31">Корректировка плановых дат вех/релизов благодаря динамично-изменяемым расчетным датам<br> и фиксация фактического хода проекта</p>
-                        </div>
-                        <div class="description__paragraph" data-point="2">
-                            <h3 data-localestring="base.k32">Приоритетные требования на Roadmap </h3>
-                            <p data-localestring="base.k33">Отображение длительности выполнения требований в рамках каждой вехи/релиза</p>
-                        </div>
-                    </div>
-                    <div class="description__img-block">
-                        <span data-destination="1" class="description__point"></span>
-                        <span data-destination="2" class="description__point"></span>
-                        <div class="description__img-wrapper">
-                            <img src="/img/d-1-en.png" data-src-ru="/img/d-1.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="description-wrapper description-wrapper--2">
-            <div class="description description--2">
-                <div class="description__header-text">
-                    <h3 data-localestring="base.k34" class="description__header">Сокращение разрыва между планом и фактом</h3>
-                    <p data-localestring="base.k35" class="description__subheader">Автоматическое построение диаграмм Гантта на основании связей между задачами, исполнителей и приоритетов</p>
-                </div>
-                <div class="description__main">
-                    <div class="description__text-block">
-                        <div class="description__paragraph" data-point="1">
-                            <h3 data-localestring="base.k36">Диаграмма Гантта для требований </h3>
-                            <p data-localestring="base.k37">Сравнение планового графика с динамически изменяемым фактическим ходом проекта </p>
-                        </div>
-                        <div class="description__paragraph" data-point="2">
-                            <h3 data-localestring="base.k38">Диаграмма Гантта для задач</h3>
-                            <p data-localestring="base.k39">Автоматическое построение графика на причинно-следственных связях и ручное уточнение по связям исполнения</p>
-                        </div>
-                    </div>
-                    <div class="description__img-block">
-                        <span data-destination="1" class="description__point"></span>
-                        <span data-destination="2" class="description__point"></span>
-                        <div class="description__img-wrapper">
-                            <img src="/img/d-2-en.png" data-src-ru="/img/d-2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="description-wrapper description-wrapper--3">
-            <div class="description description--3">
-                <div class="description__header-text">
-                    <h3 data-localestring="base.k40" class="description__header">Управление требованиями</h3>
-                    <p data-localestring="base.k41" class="description__subheader">Идентификация, документирование, отслеживание, приоритизация </p>
-                </div>
-                <div class="description__main">
-                    <div class="description__text-block">
-                        <div class="description__paragraph" data-point="1">
-                            <h3 data-localestring="base.k42">Классификация требований </h3>
-                            <p data-localestring="base.k43">Требования разбиты по типам и имеют уникальные поля, можно устанавливать взаимосвязи и зависимости</p>
-                        </div>
-                        <div class="description__paragraph" data-point="2">
-                            <h3 data-localestring="base.k44">Констрейны</h3>
-                            <p data-localestring="base.k45">К любому типу требования можно указать некоторое правило</p>
-                        </div>
-                        <div class="description__paragraph" data-point="3">
-                            <h3 data-localestring="base.k46">Приоритеты</h3>
-                            <p data-localestring="base.k47">Требованиям устанавливаются приоритеты, которые влияют на дальнейшую последовательность исполнения задач</p>
-                        </div>
-                    </div>
-                    <div class="description__img-block">
-                        <span data-destination="1" class="description__point"></span>
-                        <span data-destination="2" class="description__point"></span>
-                        <span data-destination="3" class="description__point"></span>
-                        <div class="description__img-wrapper">
-                            <img src="/img/d-3-en.png" data-src-ru="/img/d-3.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="description-wrapper description-wrapper--4">
-            <div class="description description--4">
-                <div class="description__header-text">
-                    <h3 data-localestring="base.k48" class="description__header">Планирование спринта </h3>
-                    <p data-localestring="base.k49" class="description__subheader">Возможность контролировать задержки и простои в процессе исполнения</p>
-                </div>
-                <div class="description__main">
-                    <div class="description__text-block">
-                        <div class="description__paragraph" data-point="1">
-                            <h3 data-localestring="base.k50">Учет зависимостей при планировании</h3>
-                            <p data-localestring="base.k51">Поставив задачу на спринт, система автоматически подтянет все зависимые задачи и распределит их на <br>ожидающий этап и готовый к работе</p>
-                        </div>
-                        <div class="description__paragraph" data-point="2">
-                            <h3 data-localestring="base.k52">Назначение исполнителей</h3>
-                            <p data-localestring="base.k53">Автоматическое распределение и мануальное назначение задач между исполнителями с учетом их навыков</p>
-                        </div>
-                        <div class="description__paragraph" data-point="3">
-                            <h3 data-localestring="base.k54">Нагрузка и простои</h3>
-                            <p data-localestring="base.k55">Система автоматически отображает нагрузку на исполнителей и их простои</p>
-                        </div>
-                    </div>
-                    <div class="description__img-block">
-                        <span data-destination="1" class="description__point"></span>
-                        <span data-destination="2" class="description__point"></span>
-                        <span data-destination="3" class="description__point"></span>
-                        <div class="description__img-wrapper">
-                            <img src="/img/d-4-en.png" data-src-ru="/img/d-4.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="description-wrapper description-wrapper--5">
-            <div class="description description--5">
-                <div class="description__header-text">
-                    <h3 data-localestring="base.k56" class="description__header">Управление исполнением</h3>
-                    <p data-localestring="base.k57" class="description__subheader">Гибкая настройка индивидуальных процессов исполнения</p>
-                </div>
-                <div class="description__main">
-                    <div class="description__text-block">
-                        <div class="description__paragraph" data-point="1">
-                            <h3 data-localestring="base.k58">Настройка роли</h3>
-                            <p data-localestring="base.k59">Настройка индивидуального процесса для каждого вида технологии</p>
-                        </div>
-                        <div class="description__paragraph" data-point="2">
-                            <h3 data-localestring="base.k60">Настройка процесса</h3>
-                            <p data-localestring="base.k61">Настройка индивидуального поведения исполнителя в каждой роли на процессе</p>
-                        </div>
-                        <div class="description__paragraph" data-point="3">
-                            <h3 data-localestring="base.k62">Настройка Kanban доски</h3>
-                            <p data-localestring="base.k63">По выбранному параметру - исполнитель, технология, роль</p>
-                        </div>
-                    </div>
-                    <div class="description__img-block">
-                        <span data-destination="1" class="description__point"></span>
-                        <span data-destination="2" class="description__point"></span>
-                        <span data-destination="3" class="description__point"></span>
-                        <div class="description__img-wrapper">
-                            <img src="/img/d-5-en.png" data-src-ru="/img/d-5.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-    <div class="download">
-        <div class="container">
-            <div class="download__block">
-                <div class="download__img"></div>
-                <h3 data-localestring="base.k116" class="download__block-header">Пользовательская документация</h3>
-                <a href="#" class="download__btn pop-up-button" data-destenation="pop-up-user-documentation"></a>
-            </div>
-            <div class="download__block">
-                <div class="download__img"></div>
-                <h3 data-localestring="base.k117" class="download__block-header">Техническая документация</h3>
-                <a href="#" class="download__btn pop-up-button" data-destenation="pop-up-technical-documentation"></a>
-            </div>
-            <div class="download__block download__block--product-sheet">
-                <div class="download__img download__img--fill"></div>
-                <h3  data-localestring="base.k118" class="download__block-header">Презентация продукта</h3>
-                <a href="#" class="download__btn pop-up-button" data-destenation="pop-up-product-sheet"></a>
-            </div>
-        </div>
-    </div>
-    <!---->
-    <div class="directions">
-        <div class="container">
-            <h2 data-localestring="base.k64" class="page-header">Ключевые направления в разработке ПО</h2>
-            <p data-localestring="base.k65" class="directions__subheader">Направлены на сокращение разрыва между планом и фактом</p>
-            <div class="directions__list">
-                <div class="direction-item">
-                    <h3 data-localestring="base.k66" class="direction-item__header"><span class="direction-item__position">1</span>Управление проектом. план и отчетность</h3>
-                    <ul class="direction-item__list">
-                        <li data-localestring="base.k67">Стратегический менеджмент - от постановки целей до контроля достижений и управление качеством</li>
-                        <li data-localestring="base.k68">Моделирование команд на проекте</li>
-                        <li>Roadmap</li>
-                        <li data-localestring="base.k69">Отчеты рабочего времени (time sheets) и продуктивности</li>
-                    </ul>
-                </div>
-                <div class="direction-item">
-                    <h3 data-localestring="base.k70" class="direction-item__header"><span class="direction-item__position">2</span>Управление командой и коммуникация</h3>
-                    <ul class="direction-item__list">
-                        <li data-localestring="base.k71">настройка ролей, навыков и доступов</li>
-                        <li data-localestring="base.k72">совместная работа</li>
-                        <li data-localestring="base.k73">лента активности команды</li>
-                        <li data-localestring="base.k74">чат</li>
-                    </ul>
-                </div>
-                <div class="direction-item">
-                    <h3 data-localestring="base.k75" class="direction-item__header"><span class="direction-item__position">3</span>Управление требованиями</h3>
-                    <ul class="direction-item__list">
-                        <li data-localestring="base.k76">классификация требований</li>
-                        <li data-localestring="base.k77">планирование продукта</li>
-                        <li data-localestring="base.k78">проектирование функций, интерфейсов, ассетов</li>
-                        <li data-localestring="base.k79">установление взаимосвязей между требованиями и функциями, между функциями и вехами, между разными функциями</li>
-                        <li data-localestring="base.k80">проектирование планов тестирования</li>
-                    </ul>
-                </div>
-                <div class="direction-item">
-                    <h3 data-localestring="base.k81" class="direction-item__header"><span class="direction-item__position">4</span>Управление процессом реализации проекта</h3>
-                    <ul class="direction-item__list">
-                        <li data-localestring="base.k82">Конструктор бизнес процессов под технологии (workflow)</li>
-                        <li data-localestring="base.k83">Планирование спринта</li>
-                        <li>Smart Kanban</li>
-                    </ul>
-                </div>
-                <div class="direction-item">
-                    <h3 data-localestring="base.k84" class="direction-item__header"><span class="direction-item__position">5</span>Управление ветками программного кода</h3>
-                    <ul class="direction-item__list">
-                        <li data-localestring="base.k85">Управление жизненным циклом программного продукта - dev, stage, production, requirement, hot fix</li>
-                    </ul>
-                </div>
-                <div class="direction-item">
-                    <h3 data-localestring="base.k86" class="direction-item__header"><span class="direction-item__position">6</span>Управление качеством</h3>
-                    <ul class="direction-item__list">
-                        <li data-localestring="base.k87">Continuous Integration Testing - автоматизированные запуски Unit и сценарных тестов</li>
-                        <li data-localestring="base.k88">Отчеты об ошибках и автоматизированное создание задач по их исправлению</li>
-                        <li data-localestring="base.k89">Continuous Deployment - автоматизированная публикация релизов</li>
-                        <li data-localestring="base.k90">Прохождение мануальных тестов, отчетность</li>
-                        <!--<li>Отчет по качеству и рискам</li>-->
-                    </ul>
-                </div>
-            </div>
-            <p data-localestring="base.k91" class="desktop-block directions__bottom-text">и еще 750 функций</p>
-        </div>
-    </div>
-    <!---->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__start-use">
-                <h2 data-localestring="base.k92" class="footer__header">Начните использовать Solid Cube </h2>
-                <!-- href="mailto:earlyaccess@solidcube.tech"-->
-                <a data-localestring="base.k93" href="javascript:void(0)" data-destenation="pop-up" class="footer__button footer__button--get pop-up-button">Получить ранний доступ</a>
-                <a data-localestring="base.k94" href="javascript:void(0)" data-destenation="pop-up-order" class="footer__button footer__button--order pop-up-button">Заказать презентацию</a>
-            </div>
-            <div class="footer__nav">
-                <div class="footer__language">
-                    <ul class="footer__language-list language-list">
-                        <li data-lg="en" class="current-lang"><a href="/en" class="language__item">English</a></li>
-                        <li data-lg="ru"><a href="/ru" class="language__item">Russian</a></li>
-                    </ul>
-                </div>
-                <div class="footer__location">
-                    <div class="footer__location-block">
-                        <h3 data-localestring="base.k95">Швейцария</h3>
-                        <p>Attracti S.a.r.l</p>
-                        <p>Chemin de Champ-Blanchon 55
-                            <br>1422 Grandson
-                        </p>
-                    </div>
-                    <div class="footer__location-block">
-                        <h3 data-localestring="base.k96">Украина</h3>
-                        <p data-localestring="base.k97">OOO Solid Cube</p>
-                        <p data-localestring="base.k115">04070, г. Киев, ул. Почайнинская, 12Б</p>
-                    </div>
-                </div>
-                <!--<div class="footer__menu">
-                    <div class="footer__menu-block desktop-block">
-                        <h3 data-localestring="base.k98">рубрики</h3>
-                        <a href="#" data-localestring="base.k99">Новости</a>
-                        <a href="#" data-localestring="base.k100">Прайс</a>
-                        <a href="#" data-localestring="base.k101">Команда</a>
-                    </div>
-                    <div class="footer__menu-block">
-                        <h3 data-localestring="base.k102">рубрики</h3>
-                        <a href="#" data-localestring="base.k103">Новости</a>
-                        <a href="#" data-localestring="base.k104">Прайс</a>
-                        <a href="#" data-localestring="base.k105">Блог</a>
-                        <a href="#" data-localestring="base.k106">Продукт</a>
-                        <a href="#" data-localestring="base.k107">Команда</a>
-                    </div>
-                    <div class="footer__menu-block">
-                        <h3 data-localestring="base.k108">О компании</h3>
-                        <a href="#" data-localestring="base.k109">Компания</a>
-                        <a href="#" data-localestring="base.k110">Поддержка</a>
-                        <a href="#" data-localestring="base.k111">Контакты</a>
-                        <a href="#" data-localestring="base.k112">Документация</a>
-                    </div>
-                </div>-->
-            </div>
-            <!--<div class="footer__policy">
-                <p data-localestring="base.k113">Условия использования</p>
-                <p data-localestring="base.k114">Политика конфиденциальности</p>
-            </div>-->
-            <div class="mobile-block footer__copityght">&copy;Solid Cube</div>
-        </div>
-    </footer>
-
-
 </div>
 
+<div class="description">
+    <div class="description__container container__main">
+        <div class="description__line"></div>
+        <div class="description__caption">
+            build a <strong>website visiting</strong> 
+        </div>
+        <div class="description__line"></div>
+        <img src="/img/intro-pic.jpg" alt="" class="description__img">
+        <div class="description__text">
+            <p class="descroption__text_1">The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
+            <p class="descroption__text_2">
+            A huge thanks to Death to the Stock Photo for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.
+            </p>
+        </div>
+        <p class="descroption__text_3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+    </div>
+</div>
+
+<div class="boxes">
+    <div class="boxes__container container__main">
+        <div class="boxes__line"></div>
+        <div class="boxes__caption">
+            beautiful boxes <strong> showcase your content</strong>
+        </div>
+        <div class="boxes__line"></div>
+        <div class="boxes__text">
+            <p class="boxes__text_header">
+                Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!
+            </p>
+            <p class="boxes__text_content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__text">
+        Copyright &copy; Your Website 2018
+    </div>
+</footer>
     <script src="/js/main.js"></script>
 </body>
 

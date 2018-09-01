@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <!-- body -->
+
+<header class="header">
+    <div class="container">
+        <div class="header__caption">Business Casual</div>
+        <div class="header__location">3481 melrose place | beverly hills, ca 90210 | 123.456.7890 </div>
+    </div> 
+    <div class="header__navigation">
+        <nav class="navigation__item">
+            <a href="/">
+                home
+            </a>
+        </nav>
+        <nav class="navigation__item">
+            <a href="/index_about.html">
+                about
+            </a>
+        </nav>
+        <nav class="navigation__item">
+            <a href="/index_blog.html">
+            blog
+            </a>
+        </nav>
+        <nav class="navigation__item">
+            <a href="/index_contact.html">
+            contact
+            </a>
+        </nav>
+    </div>
+</header>
+<div class="blog">
+    <div class="container__main blog__container">
+        <div class="blog__line"></div>
+        <div class="blog__caption">
+            company 
+            <strong>blog</strong>
+        </div>
+        <div class="blog__line"></div>
+        <img src="/img/slide-1.jpg" alt="" class="blog__img">
+        <div class="blog__title">post title</div>
+        <div class="blog__data">october 13, 2013</div>
+        <div class="blog__title_text">
+            Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </div>
+        <button class="blog__button">
+            Read More
+        </button>
+        <div class="blog__line"></div>
+        <img src="/img/slide-2.jpg" alt="" class="blog__img">
+        <div class="blog__title">post title</div>
+        <div class="blog__data">october 13, 2013</div>
+        <div class="blog__title_text">
+            Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </div>
+        <button class="blog__button">
+            Read More
+        </button>
+        <div class="blog__line"></div>
+        <img src="/img/slide-3.jpg" alt="" class="blog__img">
+        <div class="blog__title">post title</div>
+        <div class="blog__data">october 13, 2013</div>
+        <div class="blog__title_text">
+            Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </div>
+        <button class="blog__button">
+            Read More
+        </button>
+        <div class="blog__line"></div>
+        <div class="blog__buttons_box">
+            <button class="buttons__previous_next"><a href="">&#8592; Older</a></button>
+            <button class="buttons__previous_next"><a href=""> Newer &#8594;</a></button>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer__text">
+        Copyright &copy; Your Website 2018
+    </div>
+</footer>
+
+
+
+<!-- 
+
+В чем была ошибка?
+    Ошибка была в том, что был подключен template/blog.html, который по факту был пуст и, видимо, сборщик не может обрабатывать такой шаблон.
+
+Как можно найти подобную ошибку в следующий раз?
+    Когда ты запускаешь сборку, у тебя генерируется проект в папке build. Єту ошибку я нашел просмотрев все html страницы и увидел, что index_page.html был пустым. ДДальше ты просто комментируешь части кода, что бы легче было найти источник проблемы. Например, можно закомментировать подключаемые шаблоны, стили или скрипты.
+
+
+Сейчас шаблон blog закомментирован, сделай в нем разметку и все будет работать. Ты у меня умничка)
+
+Для Гита:
+    git config --global user.email "email@example.com"
+    git config --global user.name "Mona Lisa"
+
+ -->
+
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

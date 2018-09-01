@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <!-- body -->
+
+//= template/header.html
+//= template/blog.html
+//= template/footer.html
+
+
+
+<!-- 
+
+В чем была ошибка?
+    Ошибка была в том, что был подключен template/blog.html, который по факту был пуст и, видимо, сборщик не может обрабатывать такой шаблон.
+
+Как можно найти подобную ошибку в следующий раз?
+    Когда ты запускаешь сборку, у тебя генерируется проект в папке build. Єту ошибку я нашел просмотрев все html страницы и увидел, что index_page.html был пустым. ДДальше ты просто комментируешь части кода, что бы легче было найти источник проблемы. Например, можно закомментировать подключаемые шаблоны, стили или скрипты.
+
+
+Сейчас шаблон blog закомментирован, сделай в нем разметку и все будет работать. Ты у меня умничка)
+
+Для Гита:
+    git config --global user.email "email@example.com"
+    git config --global user.name "Mona Lisa"
+
+ -->
+
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
