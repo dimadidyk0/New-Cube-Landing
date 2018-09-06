@@ -65,8 +65,22 @@ body {
     font-family: $josefin-font;
 }
 
+.slides {
+    display: flex;
+    height: 574px;
+    overflow: hidden;
+}
+
+.slides__list {
+    display: flex;
+    position: relative;
+    transition: left 0.2s ease-in-out;
+    left: 0;
+}
+
 .slider__image {
     width: 100%;
+    flex:  1 0 100%;
     background-color: tan;
     box-sizing: border-box; 
 }
@@ -171,8 +185,8 @@ body {
     margin: 0 auto;
     background-color: $background-color;
     margin-top: 20px;
-    padding-top: 52px;
-    padding-bottom: 41px;
+    padding: 52px 7px 41px 7px;
+    box-sizing: border-box
 }
 
 .boxes__line {
@@ -254,4 +268,94 @@ body {
         line-height: 24px;
         font-size: 17px;
     }
+
+    .description__container {
+        padding-top: 52px;
+    }
 }
+
+@media screen and (max-width: 720px) {
+    .container {
+        width: 690px;
+    }
+
+    .container__main {
+        width: 620px;
+    }
+
+    .description__container {
+        padding-top: 33px;
+    }
+
+    .slider__text {
+        font-size: 18px;
+    }
+
+    .slider__caption {
+        font-size: 34px;
+    }
+
+    .line {
+        margin-top: 11px;
+    }
+
+    .slider__text_by {
+        font-size: 15px;
+    }
+
+    .description__caption,
+    .boxes__caption {
+        font-size: 15px;
+        padding: 15px 0;
+    }
+
+    .description__text,
+    .descroption__text_3,
+    .boxes__text {
+        font-size: 14px;
+    }
+
+    .boxes__container {
+        padding-top: 31px;
+    }
+    
+}
+
+@media screen and (max-width: 570px) {
+    .container__main {
+        width: 470px;
+    }
+
+    .description__container {
+        padding: 30px 19px 20px 22px;
+     }
+
+    .description__img {
+        width: 250px;
+    }
+
+    .description__text, 
+    .descroption__text_3, 
+    .boxes__text {
+        font-size: 15px;
+    }
+
+    .description__caption, 
+    .boxes__caption {
+        font-size: 18px;
+        line-height: 26px;
+        padding: 17px 0;
+    }
+
+    .footer__text {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 500px;
+    }
+
+    .header__location {
+        line-height: 21px;
+    }
+} 

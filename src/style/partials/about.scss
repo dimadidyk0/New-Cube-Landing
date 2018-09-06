@@ -105,3 +105,73 @@
     font-weight: normal;
     font-size: 16px;
 }
+
+
+@media screen and (max-width: 980px) {
+    .about__img {
+        width: 342px;
+        float: left;
+        margin-right: 21px;
+    }
+
+    .box__about {
+        display: inline-block;
+    }
+
+    .about__right {
+        margin: 0;
+    }
+
+    .team__container {
+        padding-top: 53px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .about__container {
+        padding-top: 29px;
+    }
+
+    .about__caption,
+    .team__caption {
+        font-size: 14px;
+        padding: 16px 0;
+    }
+
+    .about__text {
+        font-size: 15px;
+    }
+
+    .team__container {
+        padding-top: 27px;
+    }
+
+    .team__img_text {
+        font-size: 17px;
+    }
+
+    
+}
+
+@media screen and (max-width: 570px) {
+    .about__img {
+        width: 215px;
+    }
+
+    .about__text {
+        font-size: 13px;
+    }
+
+    .about__caption, 
+    .team__caption {
+        font-size: 17px;
+    }
+
+    .team__img_text {
+        font-size: 14px;
+    }
+
+    .team__img_text--small {
+        font-size: 12px;
+    }
+}

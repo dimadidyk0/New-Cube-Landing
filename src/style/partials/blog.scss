@@ -51,7 +51,7 @@
 }
 
 .blog__img {
-    width: 1124px;
+    width: 100%;
     padding-top: 17px;
     padding-bottom: 18px;
 }
@@ -89,3 +89,29 @@
     background-color: #fff;
 }
 
+@media screen and(max-width: 720px) {
+    .blog__container {
+        padding-top: 25px;
+    }
+
+    .blog__caption {
+        padding: 20px 0;
+    }
+
+    .blog__title {
+        font-size: 20px;
+    }
+
+    .blog__data {
+        font-size: 14px;
+    }
+
+    .blog__title_text {
+        font-size: 14px;
+    }
+
+    .blog__button {
+        width: 101px;
+        font-size: 14px;
+    }
+}

@@ -112,6 +112,83 @@
     background-color: #fff;
 }
 
+
 @media screen and (max-width: 980px) {
+    .blog__img {
+        width: 100%;
+    }
+
+    .contact__caption {
+        padding: 22px 0;
+    }
+
+    .fake__map {
+        width: 450px;
+        height: 221px;
+        margin-right: 45px;
+    }
     
+    .contact__content_right {
+        font-size: 16px;
+    }
+
+    .contact__form_text {
+        font-size: 15px;
+    }
+
+    .contact__input{ 
+        width: 218px;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    .fake__map {
+        width: 380px;
+        height: 200px;  
+        margin-right: 20px;
+    }
+
+    .contact__content_right {   
+        font-size: 14px;
+        margin-right: 0;
+        line-height: 14px;
+    }
+
+    .contact__caption {
+        font-size: 15px;
+        padding: 17px 0;
+    }
+
+    .contact__container,
+    .form__container {
+        padding-top: 25px;
+    }
+
+    .contact__form_text {
+        padding-top: 13px;
+    }
+
+    .contact__form_box {
+        font-size: 13px;
+    }
+
+    .contact__input {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .fake__map {
+        width: 239px;
+        height: 150px;
+    }
+
+    .contact__content_right {
+        font-size: 12px;
+    }
+
+    .contact__input {
+        width: 115px;
+    }
 }
